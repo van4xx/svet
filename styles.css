@@ -4,18 +4,21 @@
    =================================================================== */
 
 :root {
-  --bg:           #020206;
-  --bg-elev:      #0a0a0e;
-  --bg-deeper:    #000000;
-  --ink:          #ffffff;
-  --ink-soft:     rgba(219, 219, 220, 0.85);
-  --ink-muted:    #8c8a8c;
-  --ink-faint:    rgba(255, 255, 255, 0.45);
-  --rule:         #29292b;
-  --rule-soft:    rgba(255, 255, 255, 0.08);
-  --accent:       #FF2F2F;
-  --accent-soft:  rgba(255, 47, 47, 0.18);
-  --accent-glow:  rgba(255, 47, 47, 0.35);
+  --bg:           #0a0807;
+  --bg-elev:      #14100d;
+  --bg-deeper:    #050403;
+  --ink:          #f1e8d6;
+  --ink-soft:     rgba(241, 232, 214, 0.82);
+  --ink-muted:    #9a8e76;
+  --ink-faint:    rgba(241, 232, 214, 0.45);
+  --rule:         #2a241b;
+  --rule-soft:    rgba(201, 162, 107, 0.10);
+  --accent:       #c9a26b;
+  --accent-deep:  #a87f48;
+  --accent-soft:  rgba(201, 162, 107, 0.18);
+  --accent-glow:  rgba(201, 162, 107, 0.45);
+  --wine:         #3a1424;
+  --wine-soft:    rgba(58, 20, 36, 0.4);
 
   --font-display: 'Alumni Sans', 'Futura PT', 'Helvetica Neue', sans-serif;
   --font-body:    'Jost', 'Futura PT', 'Helvetica Neue', system-ui, sans-serif;
@@ -148,7 +151,7 @@ em { font-style: normal; }              /* override default italic */
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.55) saturate(1.05) contrast(1.02);
+  filter: brightness(0.7) saturate(1.05) contrast(1.02);
   animation: heroPan 18s var(--ease-soft) forwards;
 }
 .hero__video { display: block; }
@@ -160,7 +163,8 @@ em { font-style: normal; }              /* override default italic */
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(2, 2, 6, 0.6) 0%, rgba(2, 2, 6, 0.3) 30%, rgba(2, 2, 6, 0.5) 65%, rgba(2, 2, 6, 0.95) 100%);
+    linear-gradient(90deg, rgba(10, 8, 7, 0.85) 0%, rgba(10, 8, 7, 0.55) 35%, rgba(10, 8, 7, 0.15) 65%, rgba(10, 8, 7, 0.0) 100%),
+    linear-gradient(180deg, rgba(10, 8, 7, 0.55) 0%, rgba(10, 8, 7, 0.0) 25%, rgba(10, 8, 7, 0.0) 60%, rgba(10, 8, 7, 0.95) 100%);
   z-index: 1;
 }
 .hero__inner {
@@ -173,22 +177,26 @@ em { font-style: normal; }              /* override default italic */
   grid-template-rows: auto 1fr auto;
   padding: clamp(2rem, 5vw, 4rem) 0 clamp(2rem, 4vw, 3rem);
   min-height: 100vh;
-  text-align: center;
+  text-align: left;
 }
 .hero__top {
   padding-top: 2rem;
 }
-.hero__center { align-self: center; }
+.hero__center {
+  align-self: end;
+  max-width: 720px;
+  padding-bottom: 1rem;
+}
 .hero__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(5rem, 18vw, 16rem);
+  font-size: clamp(4.5rem, 14vw, 13rem);
   line-height: 0.85;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   color: var(--ink);
   display: flex;
-  justify-content: center;
-  gap: clamp(0.4rem, 1.5vw, 1.5rem);
+  justify-content: flex-start;
+  gap: clamp(0.3rem, 1.2vw, 1.2rem);
   text-transform: uppercase;
   text-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
 }
@@ -200,13 +208,13 @@ em { font-style: normal; }              /* override default italic */
 .hero__sub {
   margin-top: clamp(1rem, 2vw, 1.5rem);
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--ink-soft);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.7rem;
   flex-wrap: wrap;
@@ -217,18 +225,19 @@ em { font-style: normal; }              /* override default italic */
 .hero__bottom {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: 1.6rem;
+  max-width: 720px;
 }
 .hero__tagline {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.4rem, 2.6vw, 2rem);
-  line-height: 1.2;
-  letter-spacing: -0.005em;
-  color: var(--ink);
-  max-width: 780px;
-  text-align: center;
+  font-size: clamp(1.1rem, 1.7vw, 1.4rem);
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: var(--ink-soft);
+  max-width: 560px;
+  text-align: left;
 }
 .hero__tagline em {
   color: var(--accent);
@@ -237,7 +246,7 @@ em { font-style: normal; }              /* override default italic */
 .hero__cta {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: clamp(1rem, 2.5vw, 1.5rem);
   flex-wrap: wrap;
 }
