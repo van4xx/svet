@@ -6,7 +6,7 @@
   <title>SVET · Коммерческое предложение для партнёров</title>
   <meta name="description" content="Гастрономический театр SVET. Камерный зал на 32 гостя в центре Москвы. Корпоративные ужины, презентации брендов, выкуп зала, проекции 360° с интеграцией бренда.">
   <meta name="theme-color" content="#020206">
-  <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.svg?v=5" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -32,7 +32,15 @@
   <!-- ============================== HERO ============================== -->
   <header class="hero">
     <div class="hero__bg">
-      <img src="assets/images/partner-loti.jpg" alt="" fetchpriority="high">
+      <video class="hero__video" id="heroVideo"
+             autoplay muted loop playsinline preload="auto"
+             poster="assets/images/partner-loti.jpg"
+             aria-hidden="true">
+        <source data-src-landscape="assets/video/Svet_16x9.mp4?v=1"
+                data-src-portrait="assets/video/Svet_9x16.mp4?v=1"
+                src="assets/video/Svet_16x9.mp4?v=1"
+                type="video/mp4">
+      </video>
     </div>
     <div class="hero__veil"></div>
 
@@ -663,6 +671,6 @@
 
   </main>
 
-  <script src="script.js?v=4" defer></script>
+  <script src="script.js?v=5" defer></script>
 </body>
 </html>

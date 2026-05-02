@@ -60,8 +60,8 @@
     });
   });
 
-  /* ---------- 5. Subtle parallax on hero image ---------------------- */
-  const heroBg = document.querySelector('.hero__bg img');
+  /* ---------- 5. Subtle parallax on hero media ---------------------- */
+  const heroBg = document.querySelector('.hero__bg img, .hero__bg video');
   if (heroBg && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     let ticking = false;
     window.addEventListener('scroll', () => {
@@ -74,6 +74,28 @@
         ticking = true;
       }
     }, { passive: true });
+  }
+
+  /* ---------- 6. Hero video — swap source by orientation ----------- */
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    const source = heroVideo.querySelector('source');
+    const landscape = source.getAttribute('data-src-landscape');
+    const portrait  = source.getAttribute('data-src-portrait');
+
+    function pickSource() {
+      const wantPortrait = window.innerWidth < 768 && window.innerWidth < window.innerHeight;
+      const wantSrc = wantPortrait ? portrait : landscape;
+      if (source.getAttribute('src') !== wantSrc) {
+        source.setAttribute('src', wantSrc);
+        heroVideo.load();
+        heroVideo.play().catch(() => { /* autoplay can be blocked, ignore */ });
+      }
+    }
+
+    pickSource();
+    window.addEventListener('resize', pickSource, { passive: true });
+    heroVideo.play().catch(() => {});
   }
 
 })();
