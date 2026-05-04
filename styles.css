@@ -8,28 +8,28 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Thin.ttf?v=11') format('truetype');
+  src: url('assets/fonts/AlumniSans-Thin.ttf?v=12') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Light.ttf?v=11') format('truetype');
+  src: url('assets/fonts/AlumniSans-Light.ttf?v=12') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Regular.ttf?v=11') format('truetype');
+  src: url('assets/fonts/AlumniSans-Regular.ttf?v=12') format('truetype');
 }
 @font-face {
   font-family: 'Futura PT';
   font-weight: 300 600;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/FuturaPTBook.otf?v=11') format('opentype');
+  src: url('assets/fonts/FuturaPTBook.otf?v=12') format('opentype');
 }
 
 :root {
@@ -1020,6 +1020,21 @@ em { font-style: normal; }              /* override default italic */
 }
 .brand-block--reverse .brand-block__copy { order: 2; }
 .brand-block--reverse .brand-block__media { order: 1; }
+.brand-block--solo {
+  grid-template-columns: 1fr;
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.brand-block--solo .brand-block__copy {
+  max-width: 880px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+  flex-wrap: wrap;
+}
+.brand-block--solo .brand-block__copy > .brand-block__title { flex: 1 1 320px; }
+.brand-block--solo .brand-block__copy > p { flex: 2 1 480px; }
 .brand-block__copy {
   display: flex;
   flex-direction: column;
