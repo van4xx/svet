@@ -8,28 +8,28 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Thin.ttf?v=13') format('truetype');
+  src: url('assets/fonts/AlumniSans-Thin.ttf?v=14') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Light.ttf?v=13') format('truetype');
+  src: url('assets/fonts/AlumniSans-Light.ttf?v=14') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Regular.ttf?v=13') format('truetype');
+  src: url('assets/fonts/AlumniSans-Regular.ttf?v=14') format('truetype');
 }
 @font-face {
   font-family: 'Futura PT';
   font-weight: 300 600;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/FuturaPTBook.otf?v=13') format('opentype');
+  src: url('assets/fonts/FuturaPTBook.otf?v=14') format('opentype');
 }
 
 :root {
@@ -1426,6 +1426,81 @@ em { font-style: normal; }              /* override default italic */
   top: 0.6rem;
   color: var(--accent);
   font-weight: 700;
+}
+
+/* ====== section sublede (под title, без меты) =================== */
+.section__sublede {
+  grid-column: 2;
+  margin-top: 1.4rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ====== pricing list — новая раскладка тарифов =================== */
+.pricing-list {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.pricing-list__head {
+  padding: 1.4rem 0 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--rule);
+}
+.pricing-list__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.pricing-list__row:last-child { border-bottom: 0; }
+.pricing-list__row--main {
+  padding: 1.6rem 0;
+}
+.pricing-list__row--main .pricing-list__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  text-transform: uppercase;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.pricing-list__row--main .pricing-list__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.pricing-list__name {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  color: var(--ink-soft);
+}
+.pricing-list__value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  color: var(--accent);
+  white-space: nowrap;
+}
+.pricing-list__row--minor .pricing-list__value {
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
 }
 
 /* ====== pricing teaser video ===================================== */
