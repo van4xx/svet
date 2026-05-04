@@ -8,28 +8,28 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Thin.ttf?v=12') format('truetype');
+  src: url('assets/fonts/AlumniSans-Thin.ttf?v=13') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Light.ttf?v=12') format('truetype');
+  src: url('assets/fonts/AlumniSans-Light.ttf?v=13') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Regular.ttf?v=12') format('truetype');
+  src: url('assets/fonts/AlumniSans-Regular.ttf?v=13') format('truetype');
 }
 @font-face {
   font-family: 'Futura PT';
   font-weight: 300 600;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/FuturaPTBook.otf?v=12') format('opentype');
+  src: url('assets/fonts/FuturaPTBook.otf?v=13') format('opentype');
 }
 
 :root {
@@ -1426,6 +1426,36 @@ em { font-style: normal; }              /* override default italic */
   top: 0.6rem;
   color: var(--accent);
   font-weight: 700;
+}
+
+/* ====== pricing teaser video ===================================== */
+.pricing-tease {
+  margin: clamp(2rem, 4vw, 3rem) 0 0;
+  border: 1px solid var(--rule);
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+.pricing-tease__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92) saturate(1.05);
+  transition: filter 0.5s ease;
+}
+.pricing-tease:hover .pricing-tease__video {
+  filter: brightness(1) saturate(1.1);
+}
+.pricing-tease::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(10,8,7,0.0) 60%, rgba(10,8,7,0.6) 100%),
+    linear-gradient(90deg, rgba(10,8,7,0.0) 70%, rgba(10,8,7,0.4) 100%);
 }
 
 /* ====== 07 СЕРТИФИКАТЫ =========================================== */
