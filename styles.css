@@ -1,7 +1,36 @@
 /* ===================================================================
-   SVET — palette and typography mirror svetshow.ru
-   bg #020206 / ink #fff / accent #FF2F2F / Alumni Sans + Jost
+   SVET — palette and typography from official brandbook
+   bg #0a0807 / ink cream / accent gold / Alumni Sans + Futura PT
    =================================================================== */
+
+@font-face {
+  font-family: 'Alumni Sans';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/AlumniSans-Thin.ttf?v=9') format('truetype');
+}
+@font-face {
+  font-family: 'Alumni Sans';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/AlumniSans-Light.ttf?v=9') format('truetype');
+}
+@font-face {
+  font-family: 'Alumni Sans';
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/AlumniSans-Regular.ttf?v=9') format('truetype');
+}
+@font-face {
+  font-family: 'Futura PT';
+  font-weight: 300 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/FuturaPTBook.otf?v=9') format('opentype');
+}
 
 :root {
   --bg:           #0a0807;
@@ -20,8 +49,8 @@
   --wine:         #3a1424;
   --wine-soft:    rgba(58, 20, 36, 0.4);
 
-  --font-display: 'Alumni Sans', 'Futura PT', 'Helvetica Neue', sans-serif;
-  --font-body:    'Jost', 'Futura PT', 'Helvetica Neue', system-ui, sans-serif;
+  --font-display: 'Alumni Sans', 'Helvetica Neue', sans-serif;
+  --font-body:    'Futura PT', 'Helvetica Neue', system-ui, sans-serif;
 
   --container:    1280px;
   --gutter:       max(1.5rem, 5vw);
