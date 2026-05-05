@@ -8,28 +8,28 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Thin.ttf?v=16') format('truetype');
+  src: url('assets/fonts/AlumniSans-Thin.ttf?v=17') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Light.ttf?v=16') format('truetype');
+  src: url('assets/fonts/AlumniSans-Light.ttf?v=17') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Regular.ttf?v=16') format('truetype');
+  src: url('assets/fonts/AlumniSans-Regular.ttf?v=17') format('truetype');
 }
 @font-face {
   font-family: 'Futura PT';
   font-weight: 300 600;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/FuturaPTBook.otf?v=16') format('opentype');
+  src: url('assets/fonts/FuturaPTBook.otf?v=17') format('opentype');
 }
 
 :root {
@@ -1188,13 +1188,6 @@ em { font-style: normal; }              /* override default italic */
   border-color: var(--accent);
   background: var(--bg);
 }
-.partners-strip__hl {
-  color: var(--ink) !important;
-  border-color: var(--accent) !important;
-  background: linear-gradient(180deg, rgba(201,162,107,0.18), rgba(201,162,107,0.06)) !important;
-  position: relative;
-}
-
 /* ====== logo-wall (премиальные партнёры) ========================= */
 .logo-wall {
   margin-top: clamp(1.5rem, 3vw, 2.2rem);
