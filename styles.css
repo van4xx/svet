@@ -8,28 +8,28 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Thin.ttf?v=18') format('truetype');
+  src: url('assets/fonts/AlumniSans-Thin.ttf?v=19') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Light.ttf?v=18') format('truetype');
+  src: url('assets/fonts/AlumniSans-Light.ttf?v=19') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Regular.ttf?v=18') format('truetype');
+  src: url('assets/fonts/AlumniSans-Regular.ttf?v=19') format('truetype');
 }
 @font-face {
   font-family: 'Futura PT';
   font-weight: 300 600;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/FuturaPTBook.otf?v=18') format('opentype');
+  src: url('assets/fonts/FuturaPTBook.otf?v=19') format('opentype');
 }
 
 :root {
