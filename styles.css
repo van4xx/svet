@@ -8,28 +8,28 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Thin.ttf?v=21') format('truetype');
+  src: url('assets/fonts/AlumniSans-Thin.ttf?v=22') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Light.ttf?v=21') format('truetype');
+  src: url('assets/fonts/AlumniSans-Light.ttf?v=22') format('truetype');
 }
 @font-face {
   font-family: 'Alumni Sans';
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/AlumniSans-Regular.ttf?v=21') format('truetype');
+  src: url('assets/fonts/AlumniSans-Regular.ttf?v=22') format('truetype');
 }
 @font-face {
   font-family: 'Futura PT';
   font-weight: 300 600;
   font-style: normal;
   font-display: swap;
-  src: url('assets/fonts/FuturaPTBook.otf?v=21') format('opentype');
+  src: url('assets/fonts/FuturaPTBook.otf?v=22') format('opentype');
 }
 
 :root {
@@ -1572,6 +1572,39 @@ em { font-style: normal; }              /* override default italic */
   background:
     linear-gradient(180deg, rgba(10,8,7,0.0) 60%, rgba(10,8,7,0.6) 100%),
     linear-gradient(90deg, rgba(10,8,7,0.0) 70%, rgba(10,8,7,0.4) 100%);
+}
+
+/* ====== contact finale (закрывающий тизер) ====================== */
+.contact-finale {
+  margin: clamp(3rem, 6vw, 5rem) calc(-1 * var(--gutter)) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 21 / 9;
+  text-align: left;
+}
+.contact-finale__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95) saturate(1.05);
+  transition: filter 0.6s ease;
+}
+.contact-finale:hover .contact-finale__video {
+  filter: brightness(1.05) saturate(1.15);
+}
+.contact-finale::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(10,8,7,0.0) 70%, rgba(10,8,7,0.85) 100%);
+}
+@media (max-width: 640px) {
+  .contact-finale { aspect-ratio: 4 / 3; }
 }
 
 /* ====== 07 СЕРТИФИКАТЫ =========================================== */
