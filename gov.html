@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVET · Представительские и протокольные мероприятия</title>
+  <meta name="description" content="Гастрономический театр SVET в центре Москвы у м. Китай-город. Площадка представительского уровня для делегаций, отраслевых приёмов, награждений и протокольных ужинов. Полный выкуп зала на 32 гостя, безналичный расчёт, полный пакет документов, договор с юрлицом.">
+  <meta name="theme-color" content="#0a0807">
+  <link rel="icon" href="assets/favicon.svg?v=24" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SVET · Представительские и протокольные мероприятия">
+  <meta property="og:description" content="Площадка представительского уровня в центре Москвы для делегаций, отраслевых приёмов, чествований и протокольных ужинов. Полный выкуп зала, безналичный расчёт, полный пакет документов.">
+  <meta property="og:image" content="assets/images/hero.jpg?v=24">
+
+  <link rel="preload" href="assets/fonts/AlumniSans-Regular.ttf?v=24" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/FuturaPTBook.otf?v=24" as="font" type="font/otf" crossorigin>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet" href="styles.css?v=24">
+
+  <style>
+    /* мелкие правки для протокольной страницы — на базе существующих классов */
+    .docs-strip{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:34px;
+    }
+    .docs-strip__item{
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:4px;
+      padding:24px 22px;
+      background:rgba(255,255,255,.018);
+    }
+    .docs-strip__item h4{
+      font-family:'Alumni Sans',sans-serif;
+      font-weight:600;
+      font-size:1.18rem;
+      letter-spacing:.01em;
+      margin:0 0 9px;
+      color:var(--accent,#c9a26b);
+    }
+    .docs-strip__item p{
+      margin:0;
+      font-size:.94rem;
+      line-height:1.55;
+      opacity:.82;
+    }
+    @media (max-width:760px){
+      .docs-strip{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="side-mark" aria-hidden="true">
+    <span>SVET</span>
+    <span class="side-mark__sep"></span>
+    <span>ПРОТОКОЛ И ПРЕДСТАВИТЕЛЬСТВО</span>
+  </aside>
+
+  <!-- ============================== HERO ============================== -->
+  <header class="hero">
+    <div class="hero__bg">
+      <video class="hero__video" id="heroVideo"
+             autoplay muted loop playsinline preload="auto"
+             poster="assets/images/hero-poster.jpg?v=24"
+             aria-hidden="true">
+        <source data-src-landscape="assets/video/hero-2026.mp4?v=1"
+                data-src-portrait="assets/video/hero-2026-portrait.mp4?v=1"
+                src="assets/video/hero-2026.mp4?v=1"
+                type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__veil"></div>
+
+    <div class="hero__inner">
+      <div class="hero__top">
+        <span class="kicker reveal">Представительские и&nbsp;протокольные мероприятия · MMXXVI</span>
+      </div>
+
+      <div class="hero__bottom">
+        <div class="hero__sub reveal" style="--d:.3s">
+          <em>Площадка представительского уровня</em><span class="hero__dot">·</span>Москва
+        </div>
+
+        <div class="stats-strip reveal" style="--d:.45s">
+          <div class="stats-strip__item"><b>32</b><span>гостя</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>Выкуп</b><span>всего зала</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>Безнал</b><span>и документы</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>Центр</b><span>м. Китай-город</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================== MARQUEE ============================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Делегации и&nbsp;партнёрские визиты</span><span class="marquee__dot">●</span>
+      <span>Протокольные ужины</span><span class="marquee__dot">●</span>
+      <span>Награждения и&nbsp;чествования</span><span class="marquee__dot">●</span>
+      <span>Безналичный расчёт</span><span class="marquee__dot">●</span>
+      <span>Полный пакет документов</span><span class="marquee__dot">●</span>
+      <span>Договор с&nbsp;юрлицом</span><span class="marquee__dot">●</span>
+      <span>Полный выкуп зала</span><span class="marquee__dot">●</span>
+      <span>Центр Москвы</span><span class="marquee__dot">●</span>
+      <span>Делегации и&nbsp;партнёрские визиты</span><span class="marquee__dot">●</span>
+      <span>Протокольные ужины</span><span class="marquee__dot">●</span>
+      <span>Награждения и&nbsp;чествования</span><span class="marquee__dot">●</span>
+      <span>Безналичный расчёт</span><span class="marquee__dot">●</span>
+      <span>Полный пакет документов</span><span class="marquee__dot">●</span>
+      <span>Договор с&nbsp;юрлицом</span><span class="marquee__dot">●</span>
+      <span>Полный выкуп зала</span><span class="marquee__dot">●</span>
+      <span>Центр Москвы</span><span class="marquee__dot">●</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============================== 01 ДЛЯ КАКИХ ЗАДАЧ ============================== -->
+    <section id="tasks" class="section section--about">
+      <div class="section__head">
+        <div class="section__num reveal">01</div>
+        <div class="section__meta reveal" style="--d:.1s">Для каких задач</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Когда вечер<br><em>работает на&nbsp;ведомство</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Есть встречи, которые нельзя провести в&nbsp;обычном зале. Приём делегации, чествование заслуженных людей, рабочий ужин с&nbsp;партнёрами, юбилей ведомства&nbsp;— им&nbsp;нужна площадка, на&nbsp;которой всё выверено: уровень, порядок, приватность. SVET&nbsp;— камерный гастрономический театр в&nbsp;центре Москвы, который снимается под&nbsp;вашу программу целиком. 32&nbsp;гостя, два часа, выстроенные по&nbsp;протоколу, и&nbsp;ни&nbsp;одного постороннего рядом.
+        </p>
+      </div>
+
+      <ul class="principles">
+        <li class="principles__item reveal">
+          <span class="principles__num">I</span>
+          <span class="principles__name"><em>Уровень</em></span>
+        </li>
+        <li class="principles__item reveal" style="--d:.1s">
+          <span class="principles__num">II</span>
+          <span class="principles__name"><em>Порядок</em></span>
+        </li>
+        <li class="principles__item reveal" style="--d:.2s">
+          <span class="principles__num">III</span>
+          <span class="principles__name"><em>Приватность</em></span>
+        </li>
+      </ul>
+
+      <div class="formats-head reveal">
+        <span class="formats-head__label">Пять задач представительского уровня</span>
+      </div>
+
+      <ul class="formats-grid">
+        <li class="format-card reveal">
+          <span class="format-card__num">01</span>
+          <span class="format-card__name"><em>Делегации</em><br>и&nbsp;партнёрские визиты</span>
+        </li>
+        <li class="format-card reveal" style="--d:.05s">
+          <span class="format-card__num">02</span>
+          <span class="format-card__name"><em>Отраслевые</em><br>приёмы</span>
+        </li>
+        <li class="format-card reveal" style="--d:.1s">
+          <span class="format-card__num">03</span>
+          <span class="format-card__name"><em>Награждения</em><br>и&nbsp;чествования</span>
+        </li>
+        <li class="format-card reveal" style="--d:.15s">
+          <span class="format-card__num">04</span>
+          <span class="format-card__name">Закрытые<br><em>рабочие ужины</em></span>
+        </li>
+        <li class="format-card reveal" style="--d:.2s">
+          <span class="format-card__num">05</span>
+          <span class="format-card__name"><em>Юбилеи</em><br>ведомств</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 02 ПРОТОКОЛ И ПРИВАТНОСТЬ ============================== -->
+    <section id="protocol" class="section section--branding">
+      <div class="section__head">
+        <div class="section__num reveal">02</div>
+        <div class="section__meta reveal" style="--d:.1s">Протокол и приватность</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Закрытый периметр<br><em>и выверенный порядок</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Когда зал выкуплен целиком, вечер принадлежит только вам. Список гостей известен заранее, доступ под&nbsp;контролем, рассадка выстроена по&nbsp;протоколу. Мы&nbsp;привыкли работать деликатно&nbsp;— без&nbsp;лишних людей, без&nbsp;публичности и&nbsp;точно по&nbsp;согласованному сценарию.
+        </p>
+      </div>
+
+      <div class="brand-block brand-block--solo">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">A</span>
+          <h3 class="brand-block__title"><em>Полный выкуп зала</em><br>только ваши гости</h3>
+          <p>Зал снимается под&nbsp;один вечер целиком. Рядом не&nbsp;окажется случайных посетителей, чужих компаний и&nbsp;соседних столов&nbsp;— только участники вашей программы. Камерные 32&nbsp;места становятся закрытым представительским пространством на&nbsp;весь приём.</p>
+        </div>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">B</span>
+          <h3 class="brand-block__title"><em>Контроль доступа</em><br>и встреча гостей</h3>
+          <p>Список приглашённых согласуется заранее, гости проходят в&nbsp;зал по&nbsp;вашему приглашению. Встреча у&nbsp;входа, гардероб, сопровождение&nbsp;— всё выстроено так, чтобы каждый участник чувствовал внимание с&nbsp;первой минуты, а&nbsp;вы&nbsp;сохраняли контроль над&nbsp;тем, кто и&nbsp;когда входит.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/partner-redcarpet.jpg?v=24" alt="Встреча гостей у входа в зал SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">C</span>
+          <h3 class="brand-block__title"><em>Рассадка</em><br>по&nbsp;протоколу</h3>
+          <p>Места распределяются заранее, с&nbsp;учётом старшинства и&nbsp;порядка чествования. На&nbsp;каждом столе&nbsp;— имя гостя: уважительный знак внимания, который помогает сразу выстроить рассадку без&nbsp;суеты. Очерёдность выступлений и&nbsp;тостов согласуется с&nbsp;вашим протоколом.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-names.jpg?v=24" alt="Именное место гостя на столе в зале SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">D</span>
+          <h3 class="brand-block__title"><em>Безалкогольный</em><br>формат по&nbsp;запросу</h3>
+          <p>Вечер может пройти в&nbsp;полностью безалкогольном формате&nbsp;— с&nbsp;безалкогольным пейрингом и&nbsp;авторскими напитками без&nbsp;спиртного. Для&nbsp;протокольных ужинов и&nbsp;официальных приёмов это уместное и&nbsp;аккуратное решение, которое мы&nbsp;готовим по&nbsp;умолчанию, если так предписывает регламент.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/atmosphere-1.jpg?v=24" alt="Камерный зал SVET, накрытый для протокольного ужина" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-extra reveal">
+        <h3 class="brand-extra__title"><span class="brand-block__tag">+</span> Что обеспечиваем для протокола</h3>
+        <p>Полный выкуп зала и&nbsp;закрытые двери · Согласованный список гостей и&nbsp;контроль доступа · Рассадка по&nbsp;протоколу и&nbsp;именные места · Полностью безалкогольный формат по&nbsp;запросу · Конфиденциальность и&nbsp;готовность работать без&nbsp;публикаций и&nbsp;съёмок · Деликатная команда, привыкшая к&nbsp;официальным мероприятиям.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 03 УДОБСТВА ДЛЯ ГОССТРУКТУРЫ ============================== -->
+    <section id="convenience" class="section section--hall">
+      <div class="section__head">
+        <div class="section__num reveal">03</div>
+        <div class="section__meta reveal" style="--d:.1s">Удобства для госструктуры</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Всё по&nbsp;правилам —<br><em>и удобно вам</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Мы&nbsp;понимаем, что для&nbsp;ведомства важна не&nbsp;только атмосфера, но&nbsp;и&nbsp;порядок в&nbsp;расчётах, документах и&nbsp;логистике. Поэтому работаем безналично, по&nbsp;договору и&nbsp;с&nbsp;полным пакетом закрывающих документов&nbsp;— а&nbsp;центр Москвы делает площадку удобной для&nbsp;делегаций.
+        </p>
+      </div>
+
+      <div class="hall-grid">
+        <figure class="hall-grid__media reveal">
+          <img src="assets/images/partner-corporate.jpg?v=24" alt="Представительский приём в зале SVET" loading="lazy">
+        </figure>
+
+        <dl class="specs reveal" style="--d:.1s">
+          <div class="specs__row">
+            <dt>Расчёт</dt>
+            <dd>Безналичный <span class="specs__hint">/ по договору</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Документы</dt>
+            <dd>Полный пакет <span class="specs__hint">/ закрывающие</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Договор</dt>
+            <dd>ООО «ГТС» <span class="specs__hint">/ ИНН 9709109580</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Расположение</dt>
+            <dd>Центр Москвы <span class="specs__hint">/ м. Китай-город, выход 8</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Встреча гостей</dt>
+            <dd>Гардероб и&nbsp;сопровождение</dd>
+          </div>
+          <div class="specs__row">
+            <dt>Гибкость</dt>
+            <dd>Состав и&nbsp;даты <span class="specs__hint">/ под вашу программу</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Кухня</dt>
+            <dd>Представительская <span class="specs__hint">/ нордик, концепт-шеф Песоцкий</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="brand-extra reveal">
+        <h3 class="brand-extra__title"><span class="brand-block__tag">+</span> Логистика для делегаций</h3>
+        <p>Подкопаевский пер.,&nbsp;4а&nbsp;— несколько минут пешком от&nbsp;м.&nbsp;Китай-город (выход&nbsp;8), удобный подъезд в&nbsp;историческом центре. Встреча гостей у&nbsp;входа, гардероб, сопровождение в&nbsp;зал. Состав участников и&nbsp;даты согласуются гибко&nbsp;— под&nbsp;график делегации и&nbsp;регламент ведомства.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 04 ДЕЛИКАТНОЕ ОФОРМЛЕНИЕ ============================== -->
+    <section id="identity" class="section section--branding">
+      <div class="section__head">
+        <div class="section__num reveal">04</div>
+        <div class="section__meta reveal" style="--d:.1s">Деликатное оформление</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Символика ведомства —<br><em>строго и&nbsp;достойно</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Символика и&nbsp;название ведомства могут присутствовать в&nbsp;вечере выверенно и&nbsp;к&nbsp;месту&nbsp;— как знак уважения к&nbsp;поводу, а&nbsp;не&nbsp;как реклама. Мы&nbsp;подбираем уровень оформления так, чтобы он&nbsp;поддерживал официальный тон встречи и&nbsp;соответствовал её&nbsp;статусу.
+        </p>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">A</span>
+          <h3 class="brand-block__title"><em>Символика</em><br>в&nbsp;проекциях 360°</h3>
+          <p>Логотип или эмблема ведомства может появиться в&nbsp;панорамных проекциях по&nbsp;стенам зала&nbsp;— в&nbsp;момент встречи гостей или официального слова. Строго, достойно, без&nbsp;избыточности&nbsp;— ровно так, как подобает мероприятию представительского уровня.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/partner-loti.jpg?v=24" alt="Панорамная проекция 360° на стенах зала SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">B</span>
+          <h3 class="brand-block__title"><em>Заставки</em><br>к&nbsp;ключевым моментам</h3>
+          <p>Сдержанная заставка к&nbsp;началу вечера, к&nbsp;церемонии награждения или к&nbsp;официальному выступлению&nbsp;— с&nbsp;символикой и&nbsp;названием ведомства, в&nbsp;выверенном стиле. Оформление помогает обозначить статус момента, оставаясь спокойным и&nbsp;уместным.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-curtains-avito.jpg?v=24" alt="Заставка с символикой на шторах зала SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">C</span>
+          <h3 class="brand-block__title"><em>Именные столы</em><br>и&nbsp;рассадка</h3>
+          <p>Имена гостей на&nbsp;их&nbsp;местах&nbsp;— уважительный знак внимания и&nbsp;одновременно инструмент рассадки по&nbsp;протоколу. Гость сразу находит своё место, а&nbsp;распределение учитывает старшинство и&nbsp;порядок чествования. Строго, без&nbsp;суеты, по&nbsp;вашему регламенту.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-walls-tables.jpg?v=24" alt="Оформление стен и именных столов зала SVET" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 05 ЗАЛ И СЕРВИС ============================== -->
+    <section id="hall" class="section section--hall">
+      <div class="section__head">
+        <div class="section__num reveal">05</div>
+        <div class="section__meta reveal" style="--d:.1s">Зал и сервис</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          32 кресла<br><em>одна сцена</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Камерный зал с&nbsp;вращающимися креслами и&nbsp;панорамными проекциями 360°, представительская нордик-кухня концепт-шефа Станислава Песоцкого и&nbsp;деликатный сервис&nbsp;— вплоть до&nbsp;полностью безалкогольного пейринга, если так предписывает регламент мероприятия.
+        </p>
+      </div>
+
+      <div class="hall-grid">
+        <figure class="hall-grid__media reveal">
+          <img src="assets/images/partner-tables.jpg?v=24" alt="Камерный зал SVET с проекциями на столах для приёма" loading="lazy">
+        </figure>
+
+        <dl class="specs reveal" style="--d:.1s">
+          <div class="specs__row">
+            <dt>Вместимость</dt>
+            <dd>32 гостя <span class="specs__hint">/ макс. 34</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Зал</dt>
+            <dd>Выкуп целиком <span class="specs__hint">/ только ваши гости</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Кресла</dt>
+            <dd>Вращающиеся <span class="specs__hint">/ обзор всех проекций</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Проекции</dt>
+            <dd>Панорамные 360° <span class="specs__hint">/ по всему залу</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Кухня</dt>
+            <dd>Нордик <span class="specs__hint">/ Станислав Песоцкий</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Сет</dt>
+            <dd>6 блюд <span class="specs__hint">/ или веганский</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Пейринг</dt>
+            <dd>Безалкогольный <span class="specs__hint">/ или винный, коктейльный</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Длительность</dt>
+            <dd>2 часа <span class="specs__hint">/ без антракта</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== 06 РЕПЕРТУАР ============================== -->
+    <section id="repertoire" class="section section--repertoire">
+      <div class="section__head">
+        <div class="section__num reveal">06</div>
+        <div class="section__meta reveal" style="--d:.1s">Репертуар</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Три гастрономических<br><em>спектакля</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Вечер можно построить вокруг официальной части, а&nbsp;можно&nbsp;— вокруг впечатления. Любой из&nbsp;трёх режиссёрских спектаклей длительностью два часа, с&nbsp;живым вокалом, проекциями 360° и&nbsp;сетом от&nbsp;концепт-шефа Станислава Песоцкого, становится достойным общим переживанием для&nbsp;гостей и&nbsp;делегации.
+        </p>
+      </div>
+
+      <ul class="repertoire-grid">
+        <li class="rep-card reveal">
+          <a href="https://svetshow.ru/ru/atlantis/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-atlantis.jpg?v=24" alt="Atlantis — гастрономический спектакль в SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">6+</span>
+              <h3 class="rep-card__name"><em>Atlantis</em></h3>
+              <p>Шесть миров исчезнувшей цивилизации оживают в&nbsp;проекциях 360°. Режиссёр Алексей&nbsp;Франдетти.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+        <li class="rep-card reveal" style="--d:.1s">
+          <a href="https://svetshow.ru/ru/guilty-express/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-guilty-hd.jpg?v=24" alt="Guilty Show — гастрономический спектакль в SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">16+</span>
+              <h3 class="rep-card__name"><em>Guilty</em> Show</h3>
+              <p>Под&nbsp;другим углом на&nbsp;соблазны современного мира. Режиссёр Сергей&nbsp;Глазков.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+        <li class="rep-card reveal" style="--d:.2s">
+          <a href="https://svetshow.ru/ru/deti-v-kosmose/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-kids.jpg?v=24" alt="Дети в космосе — гастрономическое шоу для детей в SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">5+</span>
+              <h3 class="rep-card__name"><em>Дети</em> в&nbsp;космосе</h3>
+              <p>Гастрономическое шоу для&nbsp;детей на&nbsp;борту космического корабля&nbsp;— тёплый формат для&nbsp;семейных дат ведомства.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 07 УСЛОВИЯ И ДОКУМЕНТЫ ============================== -->
+    <section id="terms" class="section section--pricing">
+      <div class="section__head">
+        <div class="section__num reveal">07</div>
+        <div class="section__meta reveal" style="--d:.1s">Условия и документы</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Смета прозрачна,<br><em>расчёт по&nbsp;договору</em>
+        </h2>
+        <p class="section__sublede reveal" style="--d:.2s">Полный выкуп зала · 32 гостя</p>
+      </div>
+
+      <ul class="pricing-list">
+        <li class="pricing-list__row pricing-list__row--main reveal">
+          <span class="pricing-list__name">Шоу + гастрономический сет</span>
+          <span class="pricing-list__value">800&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__head reveal" style="--d:.1s">Депозит на напитки</li>
+        <li class="pricing-list__row reveal" style="--d:.15s">
+          <span class="pricing-list__name">Дневное мероприятие</span>
+          <span class="pricing-list__value">200&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__row reveal" style="--d:.2s">
+          <span class="pricing-list__name">Вечернее мероприятие</span>
+          <span class="pricing-list__value">350&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__row pricing-list__row--minor reveal" style="--d:.25s">
+          <span class="pricing-list__name">Сервисный сбор</span>
+          <span class="pricing-list__value">10%</span>
+        </li>
+      </ul>
+
+      <div class="docs-strip">
+        <div class="docs-strip__item reveal">
+          <h4>Безналичный расчёт</h4>
+          <p>Работаем по&nbsp;безналичному расчёту, по&nbsp;счёту и&nbsp;договору. Удобно для&nbsp;бюджетного финансирования и&nbsp;внутренних регламентов ведомства.</p>
+        </div>
+        <div class="docs-strip__item reveal" style="--d:.1s">
+          <h4>Полный пакет документов</h4>
+          <p>Предоставляем полный пакет закрывающих документов: договор, счёт, акт. Всё для&nbsp;корректного оформления и&nbsp;отчётности.</p>
+        </div>
+        <div class="docs-strip__item reveal" style="--d:.2s">
+          <h4>Договор и реквизиты</h4>
+          <p>Договор заключается с&nbsp;юридическим лицом ООО&nbsp;«ГТС», ИНН&nbsp;9709109580. Реквизиты и&nbsp;проект договора направим по&nbsp;запросу.</p>
+        </div>
+      </div>
+
+      <div class="brand-extra reveal">
+        <h3 class="brand-extra__title"><span class="brand-block__tag">+</span> Как мы оформляем мероприятие</h3>
+        <p>Прозрачная смета под&nbsp;вашу программу · Безналичный расчёт по&nbsp;счёту и&nbsp;договору · Полный пакет закрывающих документов · Договор с&nbsp;юрлицом ООО&nbsp;«ГТС», ИНН&nbsp;9709109580 · Расскажите о&nbsp;поводе, числе гостей и&nbsp;дате&nbsp;— направим коммерческое предложение и&nbsp;реквизиты.</p>
+      </div>
+
+      <figure class="pricing-tease reveal">
+        <video class="pricing-tease__video"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/images/hero-poster.jpg?v=24"
+               aria-hidden="true">
+          <source src="assets/video/pricing-tease.mp4?v=1" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <!-- ============================== 08 СОЦ-ДОКАЗАТЕЛЬСТВО ============================== -->
+    <section id="proof" class="section section--branding">
+      <div class="section__head">
+        <div class="section__num reveal">08</div>
+        <div class="section__meta reveal" style="--d:.1s">Нам доверяют</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Работали с&nbsp;крупнейшими<br><em>структурами страны</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          В&nbsp;SVET проходили закрытые вечера и&nbsp;приёмы крупнейших банков и&nbsp;компаний&nbsp;— структур с&nbsp;высокими требованиями к&nbsp;уровню, документам и&nbsp;конфиденциальности. Этот опыт и&nbsp;есть наша гарантия того, что ваше мероприятие пройдёт на&nbsp;соответствующем уровне.
+        </p>
+      </div>
+
+      <div class="proof-section">
+        <div class="proof-head reveal">
+          <span class="proof-head__label">Социальное доказательство</span>
+          <h3 class="proof-head__title">Уже&nbsp;<em>проводили вечера</em>&nbsp;в&nbsp;SVET</h3>
+        </div>
+
+        <ul class="partners-strip reveal" style="--d:.1s">
+          <li>Сбер&nbsp;Первый</li>
+          <li>ВТБ</li>
+          <li>Райффайзен&nbsp;Банк</li>
+          <li>Ренессанс&nbsp;жизнь</li>
+          <li>Avito&nbsp;Реклама</li>
+          <li>LOTI</li>
+          <li>MIXIT</li>
+          <li>Палмира&nbsp;Арт</li>
+          <li>Palmira&nbsp;Hotel</li>
+        </ul>
+
+        <div class="logo-wall reveal" style="--d:.15s">
+          <span class="logo-wall__label">Среди гостей — крупнейшие банки</span>
+          <div class="logo-wall__row">
+            <div class="logo-wall__item">
+              <img src="assets/images/logos/sber.svg?v=24" alt="Сбер Первый" loading="lazy">
+            </div>
+            <div class="logo-wall__item">
+              <img src="assets/images/logos/vtb.svg?v=24" alt="ВТБ" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-grid">
+          <figure class="proof-tile proof-tile--lg reveal">
+            <img src="assets/images/partner-corporate.jpg?v=24" alt="Райффайзен Банк и Ренессанс жизнь — закрытый ужин в SVET" loading="lazy">
+            <figcaption>
+              <span>Райффайзен × Ренессанс</span>
+              <em>Закрытый ужин «Гастрономическое путешествие»: выкуп зала, проекция 360°, именные места гостей&nbsp;— уровень и&nbsp;деликатность во&nbsp;всём.</em>
+            </figcaption>
+          </figure>
+          <figure class="proof-tile reveal" style="--d:.1s">
+            <img src="assets/images/branding-curtains-avito.jpg?v=24" alt="Avito Реклама — закрытое мероприятие в SVET" loading="lazy">
+            <figcaption>
+              <span>Avito&nbsp;Реклама</span>
+              <em>Фирменная заставка на&nbsp;шторах и&nbsp;оформление столов&nbsp;— строгое присутствие бренда в&nbsp;вечере.</em>
+            </figcaption>
+          </figure>
+          <figure class="proof-tile reveal" style="--d:.2s">
+            <img src="assets/images/partner-loti.jpg?v=24" alt="LOTI — закрытая премьера в SVET" loading="lazy">
+            <figcaption>
+              <span>LOTI</span>
+              <em>Кинематографичная премьера на&nbsp;панорамных стенах зала&nbsp;— впечатление представительского уровня.</em>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 09 КОНТАКТЫ ============================== -->
+    <section id="contact" class="section section--contact">
+      <div class="section__num section__num--big reveal">09 · Контакты</div>
+      <div class="contact-headline reveal" style="--d:.1s">
+        Запросить КП<br><em>и реквизиты для&nbsp;</em><span class="brand-mark">SVET</span>
+      </div>
+      <p class="contact-lede reveal" style="--d:.2s">
+        Напишите о&nbsp;поводе, числе гостей и&nbsp;желаемой дате&nbsp;— направим коммерческое предложение, смету, проект договора и&nbsp;реквизиты ООО&nbsp;«ГТС». Обсудим протокол и&nbsp;все детали в&nbsp;удобном вам формате.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:manager@svetshow.com?subject=Запрос%20КП%20и%20реквизитов%20—%20SVET" style="--d:.3s">
+          <span class="contact-card__label">Запросить КП и реквизиты</span>
+          <span class="contact-card__value">manager@svetshow.com</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+        <a class="contact-card reveal" href="mailto:event@svetshow.ru?subject=Протокольное%20мероприятие%20—%20SVET" style="--d:.4s">
+          <span class="contact-card__label">Банкеты и приёмы</span>
+          <span class="contact-card__value">event@svetshow.ru</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+        <a class="contact-card reveal" href="tel:+74950212131" style="--d:.5s">
+          <span class="contact-card__label">Телефон</span>
+          <span class="contact-card__value">+7 (495) 021-21-31</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+      </div>
+
+      <div class="contact-messengers reveal" style="--d:.6s">
+        <a href="https://yandex.ru/maps/org/svet/231070524793/" target="_blank" rel="noopener" class="messenger">
+          <span class="messenger__name">Адрес на карте</span>
+          <span class="messenger__hint">Подкопаевский пер., 4а · м. Китай-город</span>
+        </a>
+        <a href="https://t.me/AtlantisShow" target="_blank" rel="noopener" class="messenger">
+          <span class="messenger__name">Telegram</span>
+          <span class="messenger__hint">@AtlantisShow</span>
+        </a>
+        <a href="mailto:info@svetshow.ru" class="messenger">
+          <span class="messenger__name">Общие вопросы</span>
+          <span class="messenger__hint">info@svetshow.ru</span>
+        </a>
+      </div>
+
+      <figure class="contact-finale reveal" style="--d:.7s">
+        <video class="contact-finale__video"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/images/contact-finale-poster.jpg?v=24"
+               aria-hidden="true">
+          <source src="assets/video/contact-finale.mp4?v=1" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/images/svet-logo.png?v=24" alt="SVET — гастрономический театр" width="240">
+        </div>
+
+        <div class="footer__col">
+          <h4>Шоу</h4>
+          <ul>
+            <li><a href="https://svetshow.ru/ru/atlantis/" target="_blank" rel="noopener">Atlantis</a></li>
+            <li><a href="https://svetshow.ru/ru/guilty-express/" target="_blank" rel="noopener">Guilty Show</a></li>
+            <li><a href="https://svetshow.ru/ru/deti-v-kosmose/" target="_blank" rel="noopener">Дети в космосе</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Представительства и ведомствам</h4>
+          <ul>
+            <li><a href="mailto:manager@svetshow.com">Запросить КП и реквизиты</a></li>
+            <li><a href="tel:+74950212131">+7 (495) 021-21-31</a></li>
+            <li><a href="https://t.me/AtlantisShow" target="_blank" rel="noopener">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <span class="footer__small">© SVET · Представительские и протокольные мероприятия. ООО «ГТС», ИНН 9709109580. Безналичный расчёт, полный пакет документов. Смета и форматы рассчитываются индивидуально.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js?v=24" defer></script>
+</body>
+</html>

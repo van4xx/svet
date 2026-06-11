@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVET · Партнёрская программа для event-агентств</title>
+  <meta name="description" content="Гастрономический театр SVET — площадка-партнёр для event-агентств. Вы приводите клиента, мы проводим вечер под ключ по готовым программам, вы получаете комиссию 10–15%. White-label, защита сделки, пресейл-кит.">
+  <meta name="theme-color" content="#0a0807">
+  <link rel="icon" href="assets/favicon.svg?v=24" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SVET · Партнёрская программа для event-агентств">
+  <meta property="og:description" content="Площадка-партнёр для event-агентств: вы приводите клиента, мы проводим вечер под ключ, вы получаете комиссию. White-label под бренд вашего заказчика.">
+  <meta property="og:image" content="assets/images/hero.jpg?v=24">
+
+  <link rel="preload" href="assets/fonts/AlumniSans-Regular.ttf?v=24" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/FuturaPTBook.otf?v=24" as="font" type="font/otf" crossorigin>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet" href="styles.css?v=24">
+  <style>
+    /* Лёгкие точечные правки для партнёрской страницы — на базе классов styles.css */
+    .partner-steps{
+      list-style:none;margin:0;padding:0;
+      display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:4px;overflow:hidden;margin-top:48px;
+    }
+    .partner-step{
+      background:#0e0b0a;padding:42px 34px 46px;position:relative;
+    }
+    .partner-step__num{
+      font-family:'Alumni Sans',sans-serif;font-size:clamp(40px,4vw,64px);
+      line-height:.8;color:var(--accent,#c9962f);opacity:.85;display:block;margin-bottom:22px;
+    }
+    .partner-step__title{
+      font-family:'Alumni Sans',sans-serif;text-transform:uppercase;
+      letter-spacing:.04em;font-size:22px;line-height:1.05;margin:0 0 12px;color:#fff;
+    }
+    .partner-step__title em{font-style:italic;color:var(--accent,#c9962f);}
+    .partner-step__text{font-size:15px;line-height:1.55;color:rgba(255,255,255,.62);margin:0;}
+    .partner-arrow{
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      margin:26px 0 2px;color:rgba(255,255,255,.4);
+      font-family:'Alumni Sans',sans-serif;letter-spacing:.22em;
+      text-transform:uppercase;font-size:13px;
+    }
+    .partner-arrow span{flex:1;height:1px;background:rgba(255,255,255,.12);}
+    .benefits-grid{
+      list-style:none;margin:48px 0 0;padding:0;
+      display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);
+      border-radius:4px;overflow:hidden;
+    }
+    .benefit-card{background:#0e0b0a;padding:38px 32px 42px;}
+    .benefit-card__tag{
+      font-family:'Alumni Sans',sans-serif;font-size:14px;letter-spacing:.18em;
+      text-transform:uppercase;color:var(--accent,#c9962f);display:block;margin-bottom:18px;
+    }
+    .benefit-card__title{
+      font-family:'Alumni Sans',sans-serif;text-transform:uppercase;letter-spacing:.03em;
+      font-size:20px;line-height:1.08;margin:0 0 12px;color:#fff;
+    }
+    .benefit-card__text{font-size:15px;line-height:1.55;color:rgba(255,255,255,.62);margin:0;}
+    .terms-extra{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);
+      border-radius:4px;overflow:hidden;
+    }
+    .term-tile{background:#0e0b0a;padding:34px 30px;}
+    .term-tile__big{
+      font-family:'Alumni Sans',sans-serif;font-size:clamp(34px,3.4vw,52px);
+      line-height:.9;color:var(--accent,#c9962f);display:block;margin-bottom:14px;
+    }
+    .term-tile__label{
+      font-family:'Alumni Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em;
+      font-size:17px;color:#fff;margin:0 0 8px;
+    }
+    .term-tile__text{font-size:14px;line-height:1.5;color:rgba(255,255,255,.6);margin:0;}
+    .presale-grid{
+      list-style:none;margin:44px 0 0;padding:0;
+      display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);
+      border-radius:4px;overflow:hidden;
+    }
+    .presale-item{
+      background:#0e0b0a;padding:30px 32px;display:flex;gap:18px;align-items:flex-start;
+    }
+    .presale-item__mark{
+      font-family:'Alumni Sans',sans-serif;color:var(--accent,#c9962f);
+      font-size:24px;line-height:1;flex:none;
+    }
+    .presale-item__body strong{
+      display:block;font-family:'Alumni Sans',sans-serif;text-transform:uppercase;
+      letter-spacing:.03em;font-size:18px;color:#fff;margin-bottom:6px;
+    }
+    .presale-item__body span{font-size:14px;line-height:1.5;color:rgba(255,255,255,.6);}
+    .partner-note{
+      margin-top:34px;font-size:14px;line-height:1.6;
+      color:rgba(255,255,255,.5);max-width:760px;
+    }
+    @media (max-width:880px){
+      .partner-steps,.benefits-grid,.terms-extra,.presale-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="side-mark" aria-hidden="true">
+    <span>SVET</span>
+    <span class="side-mark__sep"></span>
+    <span>ПАРТНЁРСКАЯ ПРОГРАММА</span>
+  </aside>
+
+  <!-- ============================== HERO ============================== -->
+  <header class="hero">
+    <div class="hero__bg">
+      <video class="hero__video" id="heroVideo"
+             autoplay muted loop playsinline preload="auto"
+             poster="assets/images/hero-poster.jpg?v=24"
+             aria-hidden="true">
+        <source data-src-landscape="assets/video/hero-2026.mp4?v=1"
+                data-src-portrait="assets/video/hero-2026-portrait.mp4?v=1"
+                src="assets/video/hero-2026.mp4?v=1"
+                type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__veil"></div>
+
+    <div class="hero__inner">
+      <div class="hero__top">
+        <span class="kicker reveal">Партнёрская программа для event-агентств · MMXXVI</span>
+      </div>
+
+      <div class="hero__bottom">
+        <div class="hero__sub reveal" style="--d:.3s">
+          <em>Площадка под ключ</em><span class="hero__dot">·</span>Москва
+        </div>
+
+        <div class="stats-strip reveal" style="--d:.45s">
+          <div class="stats-strip__item"><b>10–15%</b><span>комиссия</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>8</b><span>форматов</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>White-label</b><span>под бренд</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>1</b><span>менеджер</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================== MARQUEE ============================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Вечер под ключ</span><span class="marquee__dot">●</span>
+      <span>Комиссия агентству</span><span class="marquee__dot">●</span>
+      <span>White-label</span><span class="marquee__dot">●</span>
+      <span>Готовые программы</span><span class="marquee__dot">●</span>
+      <span>Быстрый расчёт сметы</span><span class="marquee__dot">●</span>
+      <span>Защита сделки</span><span class="marquee__dot">●</span>
+      <span>Один менеджер</span><span class="marquee__dot">●</span>
+      <span>Пресейл-кит</span><span class="marquee__dot">●</span>
+      <span>Вечер под ключ</span><span class="marquee__dot">●</span>
+      <span>Комиссия агентству</span><span class="marquee__dot">●</span>
+      <span>White-label</span><span class="marquee__dot">●</span>
+      <span>Готовые программы</span><span class="marquee__dot">●</span>
+      <span>Быстрый расчёт сметы</span><span class="marquee__dot">●</span>
+      <span>Защита сделки</span><span class="marquee__dot">●</span>
+      <span>Один менеджер</span><span class="marquee__dot">●</span>
+      <span>Пресейл-кит</span><span class="marquee__dot">●</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============================== 01 КАК МЫ РАБОТАЕМ ============================== -->
+    <section id="how" class="section section--about">
+      <div class="section__head">
+        <div class="section__num reveal">01</div>
+        <div class="section__meta reveal" style="--d:.1s">Как мы работаем</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Вы приводите клиента —<br><em>остальное берём на себя</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          SVET — гастрономический театр в&nbsp;центре Москвы, где блюда становятся частью шоу. Для&nbsp;вас мы&nbsp;— готовая площадка-партнёр. Театр, кухня, шоу и&nbsp;сервис уже собраны в&nbsp;единый продукт: вам не&nbsp;нужно искать подрядчиков, сводить сметы и&nbsp;отвечать за&nbsp;продакшн. Вы&nbsp;приводите своего заказчика, мы&nbsp;проводим вечер под&nbsp;ключ по&nbsp;одной из&nbsp;готовых программ — и&nbsp;выплачиваем вам комиссию.
+        </p>
+      </div>
+
+      <ol class="partner-steps">
+        <li class="partner-step reveal">
+          <span class="partner-step__num">01</span>
+          <h3 class="partner-step__title"><em>Вы</em> приносите заказ</h3>
+          <p class="partner-step__text">Передаёте нам бриф клиента: дата, формат, число гостей, пожелания по&nbsp;брендированию. Мы&nbsp;в&nbsp;тот&nbsp;же день подтверждаем дату и&nbsp;присылаем прозрачную смету.</p>
+        </li>
+        <li class="partner-step reveal" style="--d:.1s">
+          <span class="partner-step__num">02</span>
+          <h3 class="partner-step__title"><em>Мы</em> проводим вечер</h3>
+          <p class="partner-step__text">Берём на&nbsp;себя театр, кухню Песоцкого, шоу, сервис, брендирование и&nbsp;координацию в&nbsp;день мероприятия. Вы&nbsp;и&nbsp;ваш клиент остаётесь гостями вечера.</p>
+        </li>
+        <li class="partner-step reveal" style="--d:.2s">
+          <span class="partner-step__num">03</span>
+          <h3 class="partner-step__title"><em>Вы</em> получаете комиссию</h3>
+          <p class="partner-step__text">После мероприятия выплачиваем вашу комиссию по&nbsp;договору. Условия прозрачны и&nbsp;зафиксированы заранее — без скрытых вычетов и&nbsp;спорных формулировок.</p>
+        </li>
+      </ol>
+
+      <div class="partner-arrow reveal" style="--d:.3s">
+        <span></span>Заказ → Театр под ключ → Комиссия<span></span>
+      </div>
+    </section>
+
+    <!-- ============================== 02 ЧТО ПОЛУЧАЕТ АГЕНТСТВО ============================== -->
+    <section id="benefits" class="section section--about">
+      <div class="section__head">
+        <div class="section__num reveal">02</div>
+        <div class="section__meta reveal" style="--d:.1s">Что получает агентство</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Готовый продукт,<br><em>с которым удобно работать</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Мы&nbsp;понимаем, как устроена работа агентства: важны предсказуемость, скорость ответа и&nbsp;уверенность, что площадка не&nbsp;подведёт перед клиентом. Поэтому всё&nbsp;на&nbsp;нашей стороне сделано так, чтобы вам было легко продавать и&nbsp;спокойно вести проект.
+        </p>
+      </div>
+
+      <ul class="benefits-grid">
+        <li class="benefit-card reveal">
+          <span class="benefit-card__tag">A</span>
+          <h3 class="benefit-card__title">Продукт под ключ</h3>
+          <p class="benefit-card__text">Готовая программа вечера: шоу, гастрономический сет, сервис и&nbsp;брендирование в&nbsp;едином сценарии. Ничего не&nbsp;нужно собирать и&nbsp;организовывать — вы&nbsp;продаёте цельный продукт, а&nbsp;не&nbsp;набор подрядчиков.</p>
+        </li>
+        <li class="benefit-card reveal" style="--d:.05s">
+          <span class="benefit-card__tag">B</span>
+          <h3 class="benefit-card__title">Прозрачные условия</h3>
+          <p class="benefit-card__text">Понятная базовая смета и&nbsp;быстрый расчёт под&nbsp;запрос клиента. Вы&nbsp;заранее знаете стоимость, размер комиссии и&nbsp;состав вечера — и&nbsp;можете называть клиенту цифры без&nbsp;долгих согласований.</p>
+        </li>
+        <li class="benefit-card reveal" style="--d:.1s">
+          <span class="benefit-card__tag">C</span>
+          <h3 class="benefit-card__title">Надёжность дат</h3>
+          <p class="benefit-card__text">Подтверждаем дату быстро и&nbsp;держим бронь под&nbsp;ваш проект. Вы&nbsp;спокойно фиксируете день с&nbsp;клиентом, зная, что площадка не&nbsp;уйдёт к&nbsp;другому заказчику.</p>
+        </li>
+        <li class="benefit-card reveal" style="--d:.15s">
+          <span class="benefit-card__tag">D</span>
+          <h3 class="benefit-card__title">Один менеджер</h3>
+          <p class="benefit-card__text">За&nbsp;вашим проектом закреплён персональный менеджер сопровождения — единая точка контакта от&nbsp;первого запроса до&nbsp;финального аккорда вечера. Без&nbsp;переписки с&nbsp;пятью отделами.</p>
+        </li>
+        <li class="benefit-card reveal" style="--d:.2s">
+          <span class="benefit-card__tag">E</span>
+          <h3 class="benefit-card__title">Пресейл-кит</h3>
+          <p class="benefit-card__text">Выдаём материалы для&nbsp;продажи: фото, видео, описания форматов и&nbsp;презентацию. Вам есть что&nbsp;показать клиенту на&nbsp;первой&nbsp;же встрече — красиво и&nbsp;убедительно.</p>
+        </li>
+        <li class="benefit-card reveal" style="--d:.25s">
+          <span class="benefit-card__tag">F</span>
+          <h3 class="benefit-card__title">White-label</h3>
+          <p class="benefit-card__text">Вечер можно полностью брендировать под&nbsp;заказчика агентства: проекции 360°, шторы, столы, заставки. Для&nbsp;гостей это&nbsp;вечер их&nbsp;бренда, а&nbsp;вы&nbsp;остаётесь автором впечатления.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 03 БРЕНДИРОВАНИЕ ПОД КЛИЕНТА ============================== -->
+    <section id="branding" class="section section--branding">
+      <div class="section__head">
+        <div class="section__num reveal">03</div>
+        <div class="section__meta reveal" style="--d:.1s">Брендирование под клиента</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Вечер под&nbsp;бренд<br><em>вашего заказчика</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          White-label на&nbsp;деле: любой элемент пространства — от&nbsp;входа до&nbsp;тарелки — становится носителем бренда вашего клиента. Гость попадает в&nbsp;его атмосферу с&nbsp;первой секунды и&nbsp;не&nbsp;видит «чужой» площадки.
+        </p>
+      </div>
+
+      <div class="brand-block brand-block--solo">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">A</span>
+          <h3 class="brand-block__title"><em>Входная группа</em><br>и красная дорожка</h3>
+          <p>Красная ковровая дорожка, бренд-волл и&nbsp;фотозона перед входом в&nbsp;зал, логотип заказчика в&nbsp;коротком ролике на&nbsp;стене фойе и&nbsp;брендированные шторы по&nbsp;бокам. Фирменный стиль клиента встречает гостя с&nbsp;первого шага.</p>
+        </div>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">B</span>
+          <h3 class="brand-block__title"><em>Проекции 360°</em><br>как сцена бренда</h3>
+          <p>Панорамные стены превращаются в&nbsp;сцену презентации вашего заказчика: слайды, видео, ключевые кадры выступления оживают в&nbsp;формате 360° по&nbsp;всему залу. Деловая часть становится полноценным иммерсивным шоу.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/partner-loti.jpg?v=24" alt="Проекция 360° под бренд клиента на стенах зала SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">C</span>
+          <h3 class="brand-block__title"><em>Имена гостей</em><br>на столах</h3>
+          <p>Логотип заказчика, изображение или короткий ролик воспроизводятся на&nbsp;каждом столе во&nbsp;время welcome-части и&nbsp;по&nbsp;завершении шоу. Имена гостей — на&nbsp;их&nbsp;персональных столах: внимание к&nbsp;каждому, которое запоминается.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-names.jpg?v=24" alt="Персональная проекция имени гостя на столе под бренд заказчика" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">D</span>
+          <h3 class="brand-block__title"><em>Шторы</em><br>и заставки</h3>
+          <p>Видео-заставка с&nbsp;логотипом заказчика на&nbsp;тёплых бархатных шторах в&nbsp;момент входа гостей и&nbsp;анимированная заставка к&nbsp;началу шоу в&nbsp;фирменном стиле. Бренд клиента — в&nbsp;каждой ключевой точке вечера.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-curtains-avito.jpg?v=24" alt="Брендированные шторы под клиента в зале SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-extra reveal">
+        <h3 class="brand-extra__title"><span class="brand-block__tag">+</span> Дополнительные опции под бренд</h3>
+        <p>Брендирование меню · Кастомный коктейль под&nbsp;заказчика · Фуршет перед мероприятием · Участие певицы в&nbsp;программе · Трансляция аудио и&nbsp;видео-контента клиента в&nbsp;зале и&nbsp;фойе.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 04 ВОСЕМЬ ФОРМАТОВ ============================== -->
+    <section id="formats" class="section section--about">
+      <div class="section__head">
+        <div class="section__num reveal">04</div>
+        <div class="section__meta reveal" style="--d:.1s">Форматы под задачу клиента</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Восемь готовых<br><em>форматов вечера</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Под&nbsp;любую задачу вашего заказчика — от&nbsp;корпоратива до&nbsp;частного ужина. Вы&nbsp;подбираете формат вместе с&nbsp;нашим менеджером, а&nbsp;наполнение каждого уже&nbsp;продумано.
+        </p>
+      </div>
+
+      <div class="formats-head reveal">
+        <span class="formats-head__label">Восемь форматов под клиента агентства</span>
+      </div>
+
+      <ul class="formats-grid">
+        <li class="format-card reveal">
+          <span class="format-card__num">01</span>
+          <span class="format-card__name"><em>Корпоративный</em><br>вечер</span>
+        </li>
+        <li class="format-card reveal" style="--d:.05s">
+          <span class="format-card__num">02</span>
+          <span class="format-card__name">Презентация<br><em>бренда</em></span>
+        </li>
+        <li class="format-card reveal" style="--d:.1s">
+          <span class="format-card__num">03</span>
+          <span class="format-card__name">Ужин для<br><em>топ-менеджмента</em></span>
+        </li>
+        <li class="format-card reveal" style="--d:.15s">
+          <span class="format-card__num">04</span>
+          <span class="format-card__name"><em>Бизнес-ужин</em><br>впечатлить</span>
+        </li>
+        <li class="format-card reveal" style="--d:.2s">
+          <span class="format-card__num">05</span>
+          <span class="format-card__name"><em>Юбилей</em><br>знаковая дата</span>
+        </li>
+        <li class="format-card reveal" style="--d:.25s">
+          <span class="format-card__num">06</span>
+          <span class="format-card__name"><em>Частный</em><br>ужин</span>
+        </li>
+        <li class="format-card reveal" style="--d:.3s">
+          <span class="format-card__num">07</span>
+          <span class="format-card__name"><em>Детский</em><br>праздник</span>
+        </li>
+        <li class="format-card reveal" style="--d:.35s">
+          <span class="format-card__num">08</span>
+          <span class="format-card__name"><em>Гала-приём</em><br>награждение</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 05 РЕПЕРТУАР ============================== -->
+    <section id="repertoire" class="section section--repertoire">
+      <div class="section__head">
+        <div class="section__num reveal">05</div>
+        <div class="section__meta reveal" style="--d:.1s">Репертуар</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Три гастрономических<br><em>спектакля</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Готовые постановки на&nbsp;выбор клиента: каждая — режиссёрский спектакль длительностью два&nbsp;часа без&nbsp;антракта, с&nbsp;панорамными проекциями, живым вокалом и&nbsp;сетом от&nbsp;концепт-шефа Станислава Песоцкого.
+        </p>
+      </div>
+
+      <ul class="repertoire-grid">
+        <li class="rep-card reveal">
+          <a href="https://svetshow.ru/ru/atlantis/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-atlantis.jpg?v=24" alt="Atlantis — гастрономический спектакль SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">6+</span>
+              <h3 class="rep-card__name"><em>Atlantis</em></h3>
+              <p>Шесть миров исчезнувшей цивилизации в&nbsp;постановке Алексея Франдетти: проекции 360° и&nbsp;вкусы сета. Подходит для&nbsp;корпоративов и&nbsp;презентаций.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+        <li class="rep-card reveal" style="--d:.1s">
+          <a href="https://svetshow.ru/ru/guilty-express/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-guilty-hd.jpg?v=24" alt="Guilty Show — гастрономический спектакль SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">16+</span>
+              <h3 class="rep-card__name"><em>Guilty</em> Show</h3>
+              <p>Постановка Сергея Глазкова под&nbsp;другим углом на&nbsp;соблазны современного мира. Смелый формат для&nbsp;взрослой аудитории и&nbsp;закрытых ужинов.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+        <li class="rep-card reveal" style="--d:.2s">
+          <a href="https://svetshow.ru/ru/deti-v-kosmose/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-kids.jpg?v=24" alt="Дети в космосе — гастрономическое шоу SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">5+</span>
+              <h3 class="rep-card__name"><em>Дети</em> в&nbsp;космосе</h3>
+              <p>Гастрономическое шоу для&nbsp;детей на&nbsp;борту космического корабля. Готовое решение для&nbsp;семейных и&nbsp;детских праздников клиента.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 06 ЗАЛ И СЕРВИС ============================== -->
+    <section id="hall" class="section section--hall">
+      <div class="section__head">
+        <div class="section__num reveal">06</div>
+        <div class="section__meta reveal" style="--d:.1s">Зал и сервис</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          32 кресла<br><em>одна сцена</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Камерный зал в&nbsp;Подкопаевском переулке у&nbsp;м.&nbsp;Китай-город (выход&nbsp;8): вращающиеся кресла, панорамные проекции 360° и&nbsp;кухня, ради&nbsp;которой возвращаются. Идеально для&nbsp;закрытых вечеров на&nbsp;небольшую тёплую аудиторию.
+        </p>
+      </div>
+
+      <div class="hall-grid">
+        <figure class="hall-grid__media reveal">
+          <img src="assets/images/partner-tables.jpg?v=24" alt="Зал SVET с проекциями на столах" loading="lazy">
+        </figure>
+
+        <dl class="specs reveal" style="--d:.1s">
+          <div class="specs__row">
+            <dt>Вместимость</dt>
+            <dd>32 гостя <span class="specs__hint">/ макс. 34</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Кресла</dt>
+            <dd>Вращающиеся <span class="specs__hint">/ обзор всех проекций</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Кухня</dt>
+            <dd>Нордик <span class="specs__hint">/ Станислав Песоцкий</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Сет</dt>
+            <dd>6 блюд <span class="specs__hint">/ есть веганский</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Пейринг</dt>
+            <dd>Винный · коктейльный · безалкогольный</dd>
+          </div>
+          <div class="specs__row">
+            <dt>Локация</dt>
+            <dd>Подкопаевский&nbsp;пер.,&nbsp;4а <span class="specs__hint">/ м. Китай-город</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== 07 УСЛОВИЯ ПАРТНЁРСТВА ============================== -->
+    <section id="terms" class="section section--pricing">
+      <div class="section__head">
+        <div class="section__num reveal">07</div>
+        <div class="section__meta reveal" style="--d:.1s">Условия партнёрства</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Прозрачная смета —<br><em>и ваша комиссия сверху</em>
+        </h2>
+        <p class="section__sublede reveal" style="--d:.3s">Полный выкуп зала · 32 гостя</p>
+      </div>
+
+      <ul class="pricing-list">
+        <li class="pricing-list__row pricing-list__row--main reveal">
+          <span class="pricing-list__name">Шоу + гастрономический сет</span>
+          <span class="pricing-list__value">800&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__head reveal" style="--d:.1s">Депозит на напитки</li>
+        <li class="pricing-list__row reveal" style="--d:.15s">
+          <span class="pricing-list__name">Дневной спектакль</span>
+          <span class="pricing-list__value">200&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__row reveal" style="--d:.2s">
+          <span class="pricing-list__name">Вечерний спектакль</span>
+          <span class="pricing-list__value">350&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__row pricing-list__row--minor reveal" style="--d:.25s">
+          <span class="pricing-list__name">Сервисный сбор</span>
+          <span class="pricing-list__value">10%</span>
+        </li>
+      </ul>
+
+      <div class="terms-extra">
+        <div class="term-tile reveal">
+          <span class="term-tile__big">10–15%</span>
+          <p class="term-tile__label">Комиссия агентства</p>
+          <p class="term-tile__text">Ваше вознаграждение от&nbsp;стоимости вечера. Точный процент зависит от&nbsp;объёма и&nbsp;регулярности заказов — и&nbsp;закрепляется в&nbsp;договоре.</p>
+        </div>
+        <div class="term-tile reveal" style="--d:.1s">
+          <span class="term-tile__big">6 мес.</span>
+          <p class="term-tile__label">Защита сделки</p>
+          <p class="term-tile__text">Приведённый вами клиент закрепляется за&nbsp;агентством на&nbsp;6&nbsp;месяцев. Если он&nbsp;вернётся снова — комиссия по&nbsp;этому заказу остаётся за&nbsp;вами.</p>
+        </div>
+        <div class="term-tile reveal" style="--d:.2s">
+          <span class="term-tile__big">×N</span>
+          <p class="term-tile__label">Индивидуальные условия</p>
+          <p class="term-tile__text">Работаете с&nbsp;нами регулярно или приводите крупные проекты&nbsp;— обсудим повышенную комиссию и&nbsp;приоритет по&nbsp;датам под&nbsp;ваш поток заказов.</p>
+        </div>
+      </div>
+
+      <p class="partner-note reveal" style="--d:.3s">
+        Базовая смета — ориентир для&nbsp;быстрого расчёта. Финальная стоимость зависит от&nbsp;формата, спектакля, числа гостей и&nbsp;объёма брендирования. Точную смету под&nbsp;запрос клиента ваш менеджер пришлёт в&nbsp;тот&nbsp;же рабочий день.
+      </p>
+
+      <figure class="pricing-tease reveal" style="--d:.4s">
+        <video class="pricing-tease__video"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/images/hero-poster.jpg?v=24"
+               aria-hidden="true">
+          <source src="assets/video/pricing-tease.mp4?v=1" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <!-- ============================== 08 СОЦ-ДОКАЗАТЕЛЬСТВО ============================== -->
+    <section id="proof" class="section section--branding">
+      <div class="section__head">
+        <div class="section__num reveal">08</div>
+        <div class="section__meta reveal" style="--d:.1s">Кому уже доверяли вечер</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Бренды, которые<br><em>выходили в&nbsp;SVET</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Площадка проверена крупными компаниями и&nbsp;их&nbsp;командами. Приводя клиента к&nbsp;нам, вы&nbsp;опираетесь на&nbsp;опыт вечеров, которые уже&nbsp;прошли на&nbsp;этом уровне.
+        </p>
+      </div>
+
+      <div class="proof-section">
+        <div class="proof-head reveal">
+          <span class="proof-head__label">Социальное доказательство</span>
+          <h3 class="proof-head__title">Уже&nbsp;<em>выходили</em>&nbsp;в&nbsp;SVET</h3>
+        </div>
+
+        <ul class="partners-strip reveal" style="--d:.1s">
+          <li>Сбер&nbsp;Первый</li>
+          <li>ВТБ</li>
+          <li>Райффайзен&nbsp;Банк</li>
+          <li>Ренессанс&nbsp;жизнь</li>
+          <li>Avito&nbsp;Реклама</li>
+          <li>LOTI</li>
+          <li>MIXIT</li>
+          <li>Палмира&nbsp;Арт</li>
+          <li>Palmira&nbsp;Hotel</li>
+        </ul>
+
+        <div class="logo-wall reveal" style="--d:.15s">
+          <span class="logo-wall__label">Премиальные банки-гости</span>
+          <div class="logo-wall__row">
+            <div class="logo-wall__item">
+              <img src="assets/images/logos/sber.svg?v=24" alt="Сбер Первый" loading="lazy">
+            </div>
+            <div class="logo-wall__item">
+              <img src="assets/images/logos/vtb.svg?v=24" alt="ВТБ" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-grid">
+          <figure class="proof-tile proof-tile--lg reveal">
+            <img src="assets/images/partner-corporate.jpg?v=24" alt="Райффайзен Банк и Ренессанс жизнь — корпоративный ужин в SVET" loading="lazy">
+            <figcaption>
+              <span>Райффайзен × Ренессанс</span>
+              <em>Корпоративный ужин «Гастрономическое путешествие»: брендированные шторы, проекция 360°, имена гостей на&nbsp;столах.</em>
+            </figcaption>
+          </figure>
+          <figure class="proof-tile reveal" style="--d:.1s">
+            <img src="assets/images/branding-curtains-avito.jpg?v=24" alt="Avito Реклама — вечер в SVET" loading="lazy">
+            <figcaption>
+              <span>Avito&nbsp;Реклама</span>
+              <em>Заставка «Выход в&nbsp;Свет» на&nbsp;шторах и&nbsp;столы с&nbsp;графическим брендингом под&nbsp;клиента.</em>
+            </figcaption>
+          </figure>
+          <figure class="proof-tile reveal" style="--d:.2s">
+            <img src="assets/images/partner-loti.jpg?v=24" alt="LOTI — премьера в SVET" loading="lazy">
+            <figcaption>
+              <span>LOTI</span>
+              <em>Кинематографичная премьера на&nbsp;всех четырёх стенах с&nbsp;продакшном контента под&nbsp;бренд.</em>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 09 ПРЕСЕЙЛ-МАТЕРИАЛЫ ============================== -->
+    <section id="presale" class="section section--about">
+      <div class="section__head">
+        <div class="section__num reveal">09</div>
+        <div class="section__meta reveal" style="--d:.1s">Пресейл-материалы</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Всё, чтобы продать<br><em>вечер с первой встречи</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          После заключения партнёрского соглашения мы&nbsp;передаём вам готовый пресейл-кит. Вы&nbsp;показываете клиенту красивую, актуальную картину вечера — и&nbsp;не&nbsp;тратите время на&nbsp;сбор материалов.
+        </p>
+      </div>
+
+      <ul class="presale-grid">
+        <li class="presale-item reveal">
+          <span class="presale-item__mark">I</span>
+          <div class="presale-item__body">
+            <strong>Фото и видео зала</strong>
+            <span>Качественные кадры и&nbsp;ролики атмосферы, проекций 360° и&nbsp;брендирования — для&nbsp;презентаций, КП&nbsp;и&nbsp;соцсетей.</span>
+          </div>
+        </li>
+        <li class="presale-item reveal" style="--d:.05s">
+          <span class="presale-item__mark">II</span>
+          <div class="presale-item__body">
+            <strong>Описания форматов</strong>
+            <span>Готовые тексты по&nbsp;восьми форматам и&nbsp;трём спектаклям — можно вставлять в&nbsp;коммерческие предложения для&nbsp;клиента.</span>
+          </div>
+        </li>
+        <li class="presale-item reveal" style="--d:.1s">
+          <span class="presale-item__mark">III</span>
+          <div class="presale-item__body">
+            <strong>Презентация площадки</strong>
+            <span>Готовая презентация SVET, которую вы&nbsp;показываете заказчику от&nbsp;своего имени — при&nbsp;желании в&nbsp;white-label оформлении.</span>
+          </div>
+        </li>
+        <li class="presale-item reveal" style="--d:.15s">
+          <span class="presale-item__mark">IV</span>
+          <div class="presale-item__body">
+            <strong>Кейсы и сметы</strong>
+            <span>Примеры реализованных вечеров и&nbsp;шаблон расчёта, чтобы быстро ориентировать клиента по&nbsp;бюджету и&nbsp;наполнению.</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="partner-note reveal" style="--d:.2s">
+        Материалы регулярно обновляются — вы&nbsp;всегда работаете с&nbsp;актуальной версией. Нужен индивидуальный материал под&nbsp;конкретного клиента? Скажите менеджеру, поможем подготовить.
+      </p>
+    </section>
+
+    <!-- ============================== 10 КОНТАКТЫ ============================== -->
+    <section id="contact" class="section section--contact">
+      <div class="section__num section__num--big reveal">10 · Контакты</div>
+      <div class="contact-headline reveal" style="--d:.1s">
+        Станьте партнёром<br><em>гастротеатра</em>&nbsp;<span class="brand-mark">SVET</span>
+      </div>
+      <p class="contact-lede reveal" style="--d:.2s">
+        Расскажите о&nbsp;своём агентстве и&nbsp;ближайшем проекте&nbsp;— менеджер по&nbsp;партнёрам свяжется в&nbsp;течение часа в&nbsp;рабочее время, согласует условия комиссии и&nbsp;передаст пресейл-кит.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:manager@svetshow.com?subject=Партнёрство%20event-агентства%20с%20SVET" style="--d:.3s">
+          <span class="contact-card__label">Менеджер по партнёрам</span>
+          <span class="contact-card__value">manager@svetshow.com</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+        <a class="contact-card reveal" href="tel:+74950212131" style="--d:.4s">
+          <span class="contact-card__label">Телефон</span>
+          <span class="contact-card__value">+7 (495) 021-21-31</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+        <a class="contact-card reveal" href="https://yandex.ru/maps/org/svet/231070524793/" target="_blank" rel="noopener" style="--d:.5s">
+          <span class="contact-card__label">Адрес</span>
+          <span class="contact-card__value">Москва<br>Подкопаевский&nbsp;пер.,&nbsp;4а</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+      </div>
+
+      <div class="contact-messengers reveal" style="--d:.6s">
+        <a href="https://t.me/AtlantisShow" target="_blank" rel="noopener" class="messenger">
+          <span class="messenger__name">Telegram</span>
+          <span class="messenger__hint">@AtlantisShow</span>
+        </a>
+        <a href="mailto:event@svetshow.ru" class="messenger">
+          <span class="messenger__name">Банкеты</span>
+          <span class="messenger__hint">event@svetshow.ru</span>
+        </a>
+        <a href="mailto:info@svetshow.ru" class="messenger">
+          <span class="messenger__name">Email</span>
+          <span class="messenger__hint">info@svetshow.ru</span>
+        </a>
+      </div>
+
+      <figure class="contact-finale reveal" style="--d:.7s">
+        <video class="contact-finale__video"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/images/contact-finale-poster.jpg?v=24"
+               aria-hidden="true">
+          <source src="assets/video/contact-finale.mp4?v=1" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/images/svet-logo.png?v=24" alt="SVET — гастрономический театр" width="240">
+        </div>
+
+        <div class="footer__col">
+          <h4>Шоу</h4>
+          <ul>
+            <li><a href="https://svetshow.ru/ru/atlantis/" target="_blank" rel="noopener">Atlantis</a></li>
+            <li><a href="https://svetshow.ru/ru/guilty-express/" target="_blank" rel="noopener">Guilty Show</a></li>
+            <li><a href="https://svetshow.ru/ru/deti-v-kosmose/" target="_blank" rel="noopener">Дети в космосе</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Партнёрам</h4>
+          <ul>
+            <li><a href="mailto:manager@svetshow.com">Партнёрская программа</a></li>
+            <li><a href="mailto:event@svetshow.ru">Банкеты и заказы</a></li>
+            <li><a href="https://t.me/AtlantisShow" target="_blank" rel="noopener">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <span class="footer__small">© SVET · ООО «ГТС», ИНН 9709109580 · Партнёрская программа для event-агентств. Условия и комиссия фиксируются индивидуально в договоре.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js?v=24" defer></script>
+</body>
+</html>

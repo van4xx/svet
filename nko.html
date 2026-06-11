@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVET · Закрытые вечера для фондов и НКО</title>
+  <meta name="description" content="Камерный гастрономический театр SVET в центре Москвы для благотворительных фондов и НКО. Полный выкуп зала на 32 гостя: попечительские ужины, встречи с донорами, благодарственные вечера в закрытом и конфиденциальном формате.">
+  <meta name="theme-color" content="#0a0807">
+  <link rel="icon" href="assets/favicon.svg?v=24" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SVET · Закрытые вечера для фондов и НКО">
+  <meta property="og:description" content="Полный выкуп камерного зала в центре Москвы. Закрытый и конфиденциальный формат для попечительских ужинов, встреч с донорами и благодарственных вечеров.">
+  <meta property="og:image" content="assets/images/hero.jpg?v=24">
+
+  <link rel="preload" href="assets/fonts/AlumniSans-Regular.ttf?v=24" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/FuturaPTBook.otf?v=24" as="font" type="font/otf" crossorigin>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet" href="styles.css?v=24">
+</head>
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="side-mark" aria-hidden="true">
+    <span>SVET</span>
+    <span class="side-mark__sep"></span>
+    <span>ФОНДАМ И НКО</span>
+  </aside>
+
+  <!-- ============================== HERO ============================== -->
+  <header class="hero">
+    <div class="hero__bg">
+      <video class="hero__video" id="heroVideo"
+             autoplay muted loop playsinline preload="auto"
+             poster="assets/images/hero-poster.jpg?v=24"
+             aria-hidden="true">
+        <source data-src-landscape="assets/video/hero-2026.mp4?v=1"
+                data-src-portrait="assets/video/hero-2026-portrait.mp4?v=1"
+                src="assets/video/hero-2026.mp4?v=1"
+                type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__veil"></div>
+
+    <div class="hero__inner">
+      <div class="hero__top">
+        <span class="kicker reveal">Для благотворительных фондов и&nbsp;НКО · MMXXVI</span>
+      </div>
+
+      <div class="hero__bottom">
+        <div class="hero__sub reveal" style="--d:.3s">
+          <em>Закрытые вечера для фондов и&nbsp;НКО</em><span class="hero__dot">·</span>Москва
+        </div>
+
+        <div class="stats-strip reveal" style="--d:.45s">
+          <div class="stats-strip__item"><b>32</b><span>гостя</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>Выкуп</b><span>всего зала</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>0</b><span>посторонних</span></div>
+          <div class="stats-strip__sep"></div>
+          <div class="stats-strip__item"><b>2 часа</b><span>наедине</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================== MARQUEE ============================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Только ваши гости</span><span class="marquee__dot">●</span>
+      <span>Закрытый периметр</span><span class="marquee__dot">●</span>
+      <span>Конфиденциальность доноров</span><span class="marquee__dot">●</span>
+      <span>Без публичности</span><span class="marquee__dot">●</span>
+      <span>Готовность к&nbsp;NDA</span><span class="marquee__dot">●</span>
+      <span>Тёплая атмосфера со&nbsp;смыслом</span><span class="marquee__dot">●</span>
+      <span>Полный выкуп зала</span><span class="marquee__dot">●</span>
+      <span>Камерный формат</span><span class="marquee__dot">●</span>
+      <span>Только ваши гости</span><span class="marquee__dot">●</span>
+      <span>Закрытый периметр</span><span class="marquee__dot">●</span>
+      <span>Конфиденциальность доноров</span><span class="marquee__dot">●</span>
+      <span>Без публичности</span><span class="marquee__dot">●</span>
+      <span>Готовность к&nbsp;NDA</span><span class="marquee__dot">●</span>
+      <span>Тёплая атмосфера со&nbsp;смыслом</span><span class="marquee__dot">●</span>
+      <span>Полный выкуп зала</span><span class="marquee__dot">●</span>
+      <span>Камерный формат</span><span class="marquee__dot">●</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============================== 01 ПОЧЕМУ SVET ДЛЯ ФОНДА ============================== -->
+    <section id="about" class="section section--about">
+      <div class="section__head">
+        <div class="section__num reveal">01</div>
+        <div class="section__meta reveal" style="--d:.1s">Почему SVET для фонда</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Место, где гостям<br><em>и&nbsp;донорам спокойно</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Самые важные разговоры фонда случаются не&nbsp;со&nbsp;сцены большого зала, а&nbsp;за&nbsp;тёплым столом, среди своих. SVET&nbsp;— камерный гастрономический театр в&nbsp;центре Москвы, который снимается под&nbsp;ваш вечер целиком. 32&nbsp;гостя, два часа без&nbsp;спешки, и&nbsp;ни&nbsp;одного постороннего рядом.
+        </p>
+      </div>
+
+      <ul class="principles">
+        <li class="principles__item reveal">
+          <span class="principles__num">I</span>
+          <span class="principles__name"><em>Камерно</em></span>
+        </li>
+        <li class="principles__item reveal" style="--d:.1s">
+          <span class="principles__num">II</span>
+          <span class="principles__name"><em>Закрыто</em></span>
+        </li>
+        <li class="principles__item reveal" style="--d:.2s">
+          <span class="principles__num">III</span>
+          <span class="principles__name"><em>Со&nbsp;смыслом</em></span>
+        </li>
+      </ul>
+
+      <div class="formats-head reveal">
+        <span class="formats-head__label">Что мы понимаем про вечер фонда</span>
+      </div>
+
+      <ul class="formats-grid">
+        <li class="format-card reveal">
+          <span class="format-card__num">01</span>
+          <span class="format-card__name"><em>Только свои</em><br>зал ваш целиком</span>
+        </li>
+        <li class="format-card reveal" style="--d:.05s">
+          <span class="format-card__num">02</span>
+          <span class="format-card__name"><em>Тишина</em><br>приватности</span>
+        </li>
+        <li class="format-card reveal" style="--d:.1s">
+          <span class="format-card__num">03</span>
+          <span class="format-card__name"><em>Тепло</em><br>без пафоса</span>
+        </li>
+        <li class="format-card reveal" style="--d:.15s">
+          <span class="format-card__num">04</span>
+          <span class="format-card__name"><em>Смысл</em><br>в&nbsp;каждой детали</span>
+        </li>
+        <li class="format-card reveal" style="--d:.2s">
+          <span class="format-card__num">05</span>
+          <span class="format-card__name"><em>Внимание</em><br>к&nbsp;каждому гостю</span>
+        </li>
+        <li class="format-card reveal" style="--d:.25s">
+          <span class="format-card__num">06</span>
+          <span class="format-card__name"><em>Достоинство</em><br>встречи</span>
+        </li>
+        <li class="format-card reveal" style="--d:.3s">
+          <span class="format-card__num">07</span>
+          <span class="format-card__name"><em>Время</em><br>на&nbsp;разговор</span>
+        </li>
+        <li class="format-card reveal" style="--d:.35s">
+          <span class="format-card__num">08</span>
+          <span class="format-card__name"><em>Забота</em><br>о&nbsp;деталях</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 02 ПРИВАТНОСТЬ ============================== -->
+    <section id="privacy" class="section section--branding">
+      <div class="section__head">
+        <div class="section__num reveal">02</div>
+        <div class="section__meta reveal" style="--d:.1s">Приватность</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Закрытый периметр —<br><em>и ваше спокойствие</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Когда вы выкупаете зал полностью, вечер принадлежит только фонду. Двери закрыты, список гостей известен заранее, и&nbsp;всё, что прозвучит за&nbsp;столом, остаётся между теми, кого вы&nbsp;пригласили. Для встреч с&nbsp;донорами это не&nbsp;деталь, а&nbsp;основа доверия.
+        </p>
+      </div>
+
+      <div class="brand-block brand-block--solo">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">A</span>
+          <h3 class="brand-block__title"><em>Полный выкуп</em><br>никаких посторонних</h3>
+          <p>Зал снимается целиком под&nbsp;один вечер. Рядом не&nbsp;окажется случайных гостей, чужих компаний и&nbsp;соседних столов&nbsp;— только те, кого пригласил фонд. Камерные 32&nbsp;места становятся вашим частным пространством на&nbsp;весь вечер.</p>
+        </div>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">B</span>
+          <h3 class="brand-block__title"><em>Закрытый</em><br>периметр и доступ</h3>
+          <p>Мы&nbsp;заранее согласуем список гостей и&nbsp;порядок встречи у&nbsp;входа. Никаких посторонних в&nbsp;фойе, никакой случайной публики&nbsp;— гости попадают в&nbsp;зал по&nbsp;вашему приглашению, а&nbsp;вы&nbsp;сохраняете контроль над&nbsp;тем, кто и&nbsp;когда входит.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/atmosphere-1.jpg?v=24" alt="Камерный закрытый зал SVET, накрытый для вечера фонда" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">C</span>
+          <h3 class="brand-block__title"><em>Конфиденциальность</em><br>гостей и доноров</h3>
+          <p>Имена, темы разговоров и&nbsp;сам факт встречи остаются внутри вечера. Мы&nbsp;готовы подписать NDA и&nbsp;работать без&nbsp;публикаций, съёмок и&nbsp;упоминаний в&nbsp;соцсетях&nbsp;— публичность включается только тогда и&nbsp;настолько, насколько решит сам фонд.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/partner-tables.jpg?v=24" alt="Накрытые столы камерного зала SVET для закрытого ужина" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">D</span>
+          <h3 class="brand-block__title"><em>Без публичности</em><br>по умолчанию</h3>
+          <p>По&nbsp;умолчанию вечер закрыт для&nbsp;внешнего мира: ни&nbsp;афиш, ни&nbsp;анонсов, ни&nbsp;посторонних кадров. Это спокойная среда для&nbsp;деликатных разговоров&nbsp;— о&nbsp;поддержке, о&nbsp;благодарности, о&nbsp;будущих программах.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-curtains-avito.jpg?v=24" alt="Бархатные шторы закрытого зала SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-extra reveal">
+        <h3 class="brand-extra__title"><span class="brand-block__tag">+</span> Что мы гарантируем фонду</h3>
+        <p>Полный выкуп зала и&nbsp;закрытые двери · Согласованный список гостей и&nbsp;контроль доступа · Готовность подписать NDA · Никаких публикаций и&nbsp;съёмок без&nbsp;вашего согласия · Деликатная команда, привыкшая к&nbsp;камерным встречам.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 03 ФОРМАТЫ ДЛЯ ФОНДА ============================== -->
+    <section id="formats" class="section section--about">
+      <div class="section__head">
+        <div class="section__num reveal">03</div>
+        <div class="section__meta reveal" style="--d:.1s">Форматы для фонда</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Вечера, в&nbsp;которых<br><em>важен каждый гость</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Один зал, разные поводы. Мы&nbsp;помогаем выстроить вечер под&nbsp;вашу задачу&nbsp;— от&nbsp;тихого ужина с&nbsp;попечителями до&nbsp;тёплого благодарственного приёма для&nbsp;тех, кто поддерживает фонд.
+        </p>
+      </div>
+
+      <div class="formats-head reveal">
+        <span class="formats-head__label">Пять форматов закрытого вечера</span>
+      </div>
+
+      <ul class="formats-grid">
+        <li class="format-card reveal">
+          <span class="format-card__num">01</span>
+          <span class="format-card__name"><em>Попечительский</em><br>ужин</span>
+        </li>
+        <li class="format-card reveal" style="--d:.05s">
+          <span class="format-card__num">02</span>
+          <span class="format-card__name">Встреча<br>с&nbsp;<em>донорами</em></span>
+        </li>
+        <li class="format-card reveal" style="--d:.1s">
+          <span class="format-card__num">03</span>
+          <span class="format-card__name"><em>Благодарственный</em><br>вечер</span>
+        </li>
+        <li class="format-card reveal" style="--d:.15s">
+          <span class="format-card__num">04</span>
+          <span class="format-card__name">Закрытая презентация<br><em>программы фонда</em></span>
+        </li>
+        <li class="format-card reveal" style="--d:.2s">
+          <span class="format-card__num">05</span>
+          <span class="format-card__name"><em>Камерный</em><br>приём</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 04 ДЕЛИКАТНОЕ ПРИСУТСТВИЕ ФОНДА ============================== -->
+    <section id="presence" class="section section--branding">
+      <div class="section__head">
+        <div class="section__num reveal">04</div>
+        <div class="section__meta reveal" style="--d:.1s">Присутствие фонда</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Тёплое оформление<br><em>без китча и нажима</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Имя фонда может присутствовать в&nbsp;вечере мягко и&nbsp;к&nbsp;месту&nbsp;— не&nbsp;как реклама, а&nbsp;как тёплый знак для&nbsp;тех, кто пришёл. Мы&nbsp;подбираем уровень присутствия так, чтобы он&nbsp;поддерживал атмосферу, а&nbsp;не&nbsp;спорил с&nbsp;ней.
+        </p>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">A</span>
+          <h3 class="brand-block__title"><em>Логотип фонда</em><br>в&nbsp;проекциях 360°</h3>
+          <p>Эмблема фонда может деликатно появиться в&nbsp;панорамных проекциях по&nbsp;стенам зала&nbsp;— в&nbsp;момент встречи гостей или короткого слова от&nbsp;команды. Спокойно, к&nbsp;месту, без&nbsp;навязчивости.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/partner-loti.jpg?v=24" alt="Панорамная проекция 360° на стенах зала SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">B</span>
+          <h3 class="brand-block__title"><em>Имена гостей</em><br>на&nbsp;их&nbsp;столах</h3>
+          <p>На&nbsp;каждом столе&nbsp;— имя гостя, тёплый личный знак внимания. Для&nbsp;попечителей и&nbsp;доноров это негромкое «вас здесь ждали и&nbsp;вам здесь рады»&nbsp;— ровно тот тон, который ценят люди, поддерживающие фонд.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-names.jpg?v=24" alt="Персональная проекция имени гостя на столе в SVET" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="brand-block brand-block--reverse">
+        <div class="brand-block__copy reveal">
+          <span class="brand-block__tag">C</span>
+          <h3 class="brand-block__title"><em>Тёплое</em><br>оформление вечера</h3>
+          <p>Заставки к&nbsp;началу, мягкий свет, аккуратные акценты в&nbsp;стиле фонда&nbsp;— мы&nbsp;собираем оформление так, чтобы оно говорило о&nbsp;смысле и&nbsp;заботе, а&nbsp;не&nbsp;о&nbsp;громкости. Без&nbsp;китча, без&nbsp;лишнего, по-человечески.</p>
+        </div>
+        <figure class="brand-block__media reveal" style="--d:.1s">
+          <img src="assets/images/branding-walls-tables.jpg?v=24" alt="Тёплое оформление стен и столов зала SVET" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 05 ЗАЛ И СЕРВИС ============================== -->
+    <section id="hall" class="section section--hall">
+      <div class="section__head">
+        <div class="section__num reveal">05</div>
+        <div class="section__meta reveal" style="--d:.1s">Зал и сервис</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          32 кресла<br><em>один тёплый вечер</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Камерный зал, вращающиеся кресла, панорамные проекции и&nbsp;нордик-кухня концепт-шефа Станислава Песоцкого. И&nbsp;деликатность во&nbsp;всём&nbsp;— вплоть до&nbsp;полностью безалкогольного пейринга, если так уместнее для&nbsp;вечера фонда.
+        </p>
+      </div>
+
+      <div class="hall-grid">
+        <figure class="hall-grid__media reveal">
+          <img src="assets/images/partner-tables.jpg?v=24" alt="Камерный зал SVET с проекциями на столах для вечера фонда" loading="lazy">
+        </figure>
+
+        <dl class="specs reveal" style="--d:.1s">
+          <div class="specs__row">
+            <dt>Вместимость</dt>
+            <dd>32 гостя <span class="specs__hint">/ макс. 34</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Зал</dt>
+            <dd>Выкуп целиком <span class="specs__hint">/ только ваши гости</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Кресла</dt>
+            <dd>Вращающиеся <span class="specs__hint">/ обзор всех проекций</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Кухня</dt>
+            <dd>Нордик <span class="specs__hint">/ Станислав Песоцкий</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Сет</dt>
+            <dd>6 блюд <span class="specs__hint">/ или веганский</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Пейринг</dt>
+            <dd>Безалкогольный <span class="specs__hint">/ или винный, коктейльный</span></dd>
+          </div>
+          <div class="specs__row">
+            <dt>Длительность</dt>
+            <dd>2 часа <span class="specs__hint">/ без антракта</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== 06 РЕПЕРТУАР ============================== -->
+    <section id="repertoire" class="section section--repertoire">
+      <div class="section__head">
+        <div class="section__num reveal">06</div>
+        <div class="section__meta reveal" style="--d:.1s">Репертуар</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Спектакль —<br><em>фон вашего вечера</em>
+        </h2>
+        <p class="section__lede reveal" style="--d:.3s">
+          Вечер можно построить вокруг разговора, а&nbsp;можно&nbsp;— вокруг впечатления. Любой из&nbsp;трёх гастрономических спектаклей с&nbsp;живым вокалом и&nbsp;проекциями 360° становится тёплым общим переживанием, которое сближает гостей и&nbsp;остаётся в&nbsp;памяти.
+        </p>
+      </div>
+
+      <ul class="repertoire-grid">
+        <li class="rep-card reveal">
+          <a href="https://svetshow.ru/ru/atlantis/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-atlantis.jpg?v=24" alt="Atlantis — гастрономический спектакль в SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">6+</span>
+              <h3 class="rep-card__name"><em>Atlantis</em></h3>
+              <p>Шесть миров исчезнувшей цивилизации оживают в&nbsp;проекциях 360°. Режиссёр Алексей&nbsp;Франдетти.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+        <li class="rep-card reveal" style="--d:.1s">
+          <a href="https://svetshow.ru/ru/guilty-express/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-guilty-hd.jpg?v=24" alt="Guilty Show — гастрономический спектакль в SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">16+</span>
+              <h3 class="rep-card__name"><em>Guilty</em> Show</h3>
+              <p>Под&nbsp;другим углом на&nbsp;соблазны современного мира. Режиссёр Сергей&nbsp;Глазков.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+        <li class="rep-card reveal" style="--d:.2s">
+          <a href="https://svetshow.ru/ru/deti-v-kosmose/" target="_blank" rel="noopener" class="rep-card__link">
+            <figure class="rep-card__media">
+              <img src="assets/images/show-kids.jpg?v=24" alt="Дети в космосе — гастрономическое шоу для детей в SVET" loading="lazy">
+            </figure>
+            <div class="rep-card__body">
+              <span class="rep-card__age">5+</span>
+              <h3 class="rep-card__name"><em>Дети</em> в&nbsp;космосе</h3>
+              <p>Гастрономическое шоу для&nbsp;детей на&nbsp;борту космического корабля&nbsp;— тёплый формат для&nbsp;семейных вечеров.</p>
+              <span class="rep-card__cue">Подробнее <i>↓</i></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 07 СПЕЦУСЛОВИЯ ДЛЯ НКО ============================== -->
+    <section id="terms" class="section section--pricing">
+      <div class="section__head">
+        <div class="section__num reveal">07</div>
+        <div class="section__meta reveal" style="--d:.1s">Спецусловия для НКО</div>
+        <h2 class="section__title reveal" style="--d:.2s">
+          Считаем смету<br><em>вместе с&nbsp;вами</em>
+        </h2>
+        <p class="section__sublede reveal" style="--d:.2s">Гибко и&nbsp;по&nbsp;договору</p>
+      </div>
+
+      <ul class="pricing-list">
+        <li class="pricing-list__row pricing-list__row--main reveal">
+          <span class="pricing-list__name">Шоу + гастрономический сет</span>
+          <span class="pricing-list__value">800&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__head reveal" style="--d:.1s">Депозит на напитки</li>
+        <li class="pricing-list__row reveal" style="--d:.15s">
+          <span class="pricing-list__name">Дневной вечер <em>— выгоднее для&nbsp;фонда</em></span>
+          <span class="pricing-list__value">200&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__row reveal" style="--d:.2s">
+          <span class="pricing-list__name">Вечерний спектакль</span>
+          <span class="pricing-list__value">350&nbsp;000&nbsp;₽</span>
+        </li>
+        <li class="pricing-list__row pricing-list__row--minor reveal" style="--d:.25s">
+          <span class="pricing-list__name">Сервисный сбор</span>
+          <span class="pricing-list__value">10%</span>
+        </li>
+      </ul>
+
+      <div class="brand-extra reveal">
+        <h3 class="brand-extra__title"><span class="brand-block__tag">+</span> Как мы работаем с фондами</h3>
+        <p>Гибкая индивидуальная смета под&nbsp;задачу вечера · Дневной формат заметно выгоднее по&nbsp;депозиту · Безналичный расчёт и&nbsp;договор с&nbsp;закрывающими документами · Индивидуальный подход к&nbsp;каждому фонду&nbsp;— расскажите о&nbsp;поводе и&nbsp;числе гостей, и&nbsp;мы&nbsp;соберём предложение под&nbsp;вас.</p>
+      </div>
+
+      <figure class="pricing-tease reveal">
+        <video class="pricing-tease__video"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/images/hero-poster.jpg?v=24"
+               aria-hidden="true">
+          <source src="assets/video/pricing-tease.mp4?v=1" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <!-- ============================== 08 КОНТАКТЫ ============================== -->
+    <section id="contact" class="section section--contact">
+      <div class="section__num section__num--big reveal">08 · Контакты</div>
+      <div class="contact-headline reveal" style="--d:.1s">
+        Обсудить<br><em>закрытый вечер в&nbsp;</em><span class="brand-mark">SVET</span>
+      </div>
+      <p class="contact-lede reveal" style="--d:.2s">
+        Напишите нам о&nbsp;поводе, числе гостей и&nbsp;желаемой дате&nbsp;— мы&nbsp;вернёмся с&nbsp;индивидуальной сметой и&nbsp;всё обсудим конфиденциально, без&nbsp;лишних глаз.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:event@svetshow.ru?subject=Закрытый%20вечер%20для%20фонда" style="--d:.3s">
+          <span class="contact-card__label">Банкеты и закрытые вечера</span>
+          <span class="contact-card__value">event@svetshow.ru</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+        <a class="contact-card reveal" href="tel:+74950212131" style="--d:.4s">
+          <span class="contact-card__label">Телефон</span>
+          <span class="contact-card__value">+7 (495) 021-21-31</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+        <a class="contact-card reveal" href="https://yandex.ru/maps/org/svet/231070524793/" target="_blank" rel="noopener" style="--d:.5s">
+          <span class="contact-card__label">Адрес</span>
+          <span class="contact-card__value">Москва<br>Подкопаевский&nbsp;пер.,&nbsp;4а</span>
+          <span class="contact-card__arrow">→</span>
+        </a>
+      </div>
+
+      <div class="contact-messengers reveal" style="--d:.6s">
+        <a href="mailto:event@svetshow.ru?subject=Закрытый%20вечер%20для%20фонда" class="messenger">
+          <span class="messenger__name">Обсудить закрытый вечер</span>
+          <span class="messenger__hint">event@svetshow.ru</span>
+        </a>
+        <a href="https://t.me/AtlantisShow" target="_blank" rel="noopener" class="messenger">
+          <span class="messenger__name">Telegram</span>
+          <span class="messenger__hint">@AtlantisShow</span>
+        </a>
+        <a href="mailto:manager@svetshow.com" class="messenger">
+          <span class="messenger__name">Менеджер · партнёрам</span>
+          <span class="messenger__hint">manager@svetshow.com</span>
+        </a>
+      </div>
+
+      <figure class="contact-finale reveal" style="--d:.7s">
+        <video class="contact-finale__video"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/images/contact-finale-poster.jpg?v=24"
+               aria-hidden="true">
+          <source src="assets/video/contact-finale.mp4?v=1" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/images/svet-logo.png?v=24" alt="SVET — гастрономический театр" width="240">
+        </div>
+
+        <div class="footer__col">
+          <h4>Шоу</h4>
+          <ul>
+            <li><a href="https://svetshow.ru/ru/atlantis/" target="_blank" rel="noopener">Atlantis</a></li>
+            <li><a href="https://svetshow.ru/ru/guilty-express/" target="_blank" rel="noopener">Guilty Show</a></li>
+            <li><a href="https://svetshow.ru/ru/deti-v-kosmose/" target="_blank" rel="noopener">Дети в космосе</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Фондам и НКО</h4>
+          <ul>
+            <li><a href="mailto:event@svetshow.ru">Закрытый вечер</a></li>
+            <li><a href="tel:+74950212131">+7 (495) 021-21-31</a></li>
+            <li><a href="https://t.me/AtlantisShow" target="_blank" rel="noopener">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <span class="footer__small">© SVET · Закрытые вечера для фондов и НКО. ООО «ГТС», ИНН 9709109580. Цены и форматы рассчитываются индивидуально.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js?v=24" defer></script>
+</body>
+</html>
